@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Priority?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Pos?>
+<?import javafx.geometry.Insets?>
+<?import java.lang.*?>
+
+<GridPane prefWidth="200" prefHeight="100" xmlns:fx="http://javafx.com/fxml/1">
+	<hgap>10</hgap>
+	<vgap>10</vgap>
+	<padding>
+		<Insets topRightBottomLeft="10"/>
+	</padding>
+		
+	<children>
+		<Button text="btn1">
+			<maxWidth>
+				<Double fx:constant="MAX_VALUE"/>
+			</maxWidth>
+			<maxHeight>
+				<Double fx:constant="MAX_VALUE"/>
+			</maxHeight>
+			<GridPane.hgrow>
+				<Priority fx:constant="ALWAYS"/>
+			</GridPane.hgrow>
+			<GridPane.vgrow>
+				<Priority fx:constant="ALWAYS"/>
+			</GridPane.vgrow>
+			<GridPane.rowIndex>
+				<Integer fx:value="0"/>
+			</GridPane.rowIndex>
+			<GridPane.columnIndex>
+				<Integer fx:value="0"/>
+			</GridPane.columnIndex>
+		</Button>
+		<Button text="btn2">
+			<maxWidth>
+				<Double fx:constant="MAX_VALUE"/>
+			</maxWidth>
+			<maxHeight>
+				<Double fx:constant="MAX_VALUE"/>
+			</maxHeight>
+			<GridPane.hgrow>
+				<Priority fx:constant="ALWAYS"/>
+			</GridPane.hgrow>
+			<GridPane.vgrow>
+				<Priority fx:constant="ALWAYS"/>
+			</GridPane.vgrow>
+			<GridPane.rowIndex>
+				<Integer fx:value="0"/>
+			</GridPane.rowIndex>
+			<GridPane.columnIndex>
+				<Integer fx:value="1"/>
+			</GridPane.columnIndex>
+		</Button>
+		<Button text="btn3">
+			<maxWidth>
+				<Double fx:constant="MAX_VALUE"/>
+			</maxWidth>
+			<maxHeight>
+				<Double fx:constant="MAX_VALUE"/>
+			</maxHeight>
+			<GridPane.hgrow>
+				<Priority fx:constant="ALWAYS"/>
+			</GridPane.hgrow>
+			<GridPane.vgrow>
+				<Priority fx:constant="ALWAYS"/>
+			</GridPane.vgrow>
+			<GridPane.rowIndex>
+				<Integer fx:value="1"/>
+			</GridPane.rowIndex>
+			<GridPane.columnIndex>
+				<Integer fx:value="0"/>
+			</GridPane.columnIndex>
+			<GridPane.columnSpan>
+				<Integer fx:value="2"/>
+			</GridPane.columnSpan>
+		</Button>
+	</children>
+</GridPane>
+

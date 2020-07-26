@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.Priority?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Pos?>
+<?import javafx.geometry.Insets?>
+<?import java.lang.*?>
+
+<StackPane prefWidth="200" prefHeight="100" xmlns:fx="http://javafx.com/fxml/1">
+
+	<!-- 항목별 Alignment 설정을 안했을때 적용(default : CENTER) -->
+	<alignment>
+		<Pos fx:constant="CENTER"/>
+	</alignment>
+	
+	<children>
+		<Button text="Stack 1">
+			<StackPane.alignment>
+				<Pos fx:constant="CENTER"/>			
+			</StackPane.alignment>
+			<StackPane.margin>
+				<Insets right="80" bottom="30"/>				
+			</StackPane.margin>		
+		</Button>
+		<Button text="Stack 2">
+			<StackPane.alignment>
+				<Pos fx:constant="CENTER"/>			
+			</StackPane.alignment>		
+		</Button>					
+		<Button text="Stack 3">
+			<StackPane.alignment>
+				<Pos fx:constant="CENTER"/>			
+			</StackPane.alignment>
+			<StackPane.margin>
+				<Insets top="30" left="80"/>				
+			</StackPane.margin>		
+		</Button>				
+	</children>
+	
+</StackPane>
+

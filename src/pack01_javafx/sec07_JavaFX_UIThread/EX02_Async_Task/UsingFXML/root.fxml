@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import java.lang.*?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.control.TreeItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.layout.Priority?>
+<?import javafx.geometry.HPos?>
+<?import javafx.geometry.Pos?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Orientation?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.TableCell?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableColumn.CellDataFeatures?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import pack04_javafx.sec04_JavaFX_Control.EX22_TableViewControl.UsingFXML.*?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import java.time.LocalDate?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import java.io.FileInputStream?>
+<?import javafx.scene.control.Separator?>
+
+<VBox prefWidth="300" prefHeight="250" spacing="10"
+  fx:controller="pack04_javafx.sec07_JavaFX_UIThread.EX32_Async_Task.UsingFXML.MyController" 
+  xmlns:fx="http://javafx.com/fxml">
+  	<alignment>	<Pos fx:constant="CENTER"/> </alignment>
+  	<padding>	<Insets topRightBottomLeft="10"/> </padding>
+	
+	<children>
+		<Label fx:id="label" style="-fx-font-size:30" text="00:00:00"/>
+		<Separator>
+			<orientation>
+				<Orientation fx:constant="HORIZONTAL"/>
+			</orientation>
+		</Separator>
+		<HBox spacing="10">
+ 			<alignment>	<Pos fx:constant="CENTER"/> </alignment>		
+			<children>			
+				<Button fx:id="laptime" disable="true" text="LapTime"/>
+				<Button fx:id="reset" disable="true" text="Reset"/>
+				<Button fx:id="start" text="Start">
+					<maxWidth>
+						<Double fx:constant="MAX_VALUE"/>
+					</maxWidth>
+					<HBox.hgrow>
+						<Priority fx:constant="ALWAYS"/>
+					</HBox.hgrow>
+				</Button>
+				<Button fx:id="stop" disable="true" text="Stop"/>							
+			</children>
+		</HBox>
+		<HBox fx:id="hbox2" spacing="10">
+ 			<alignment>	<Pos fx:constant="CENTER"/> </alignment>		
+			<children>			
+				<Button fx:id="succeed" disable="true" text="Succeed"/>
+				<Button fx:id="fail" disable="true" text="Fail"/>
+				<Button fx:id="cancel" disable="true" text="Canceled"/>
+			</children>
+		</HBox>
+		<Separator>
+			<orientation>
+				<Orientation fx:constant="HORIZONTAL"/>
+			</orientation>
+		</Separator>
+		
+		<TextArea fx:id="laptime_ta"/>
+											
+	</children>	
+</VBox>
+

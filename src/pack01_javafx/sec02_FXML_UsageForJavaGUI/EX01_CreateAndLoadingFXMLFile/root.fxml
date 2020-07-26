@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+
+<VBox prefWidth="150" prefHeight="50" xmlns:fx="http://javafx.com/fxml">
+
+	<spacing>10</spacing>
+	
+	<children>
+		<Label text="FXML 로딩"/>
+		<Button text="클릭"/>		
+	</children>
+	
+</VBox>
+

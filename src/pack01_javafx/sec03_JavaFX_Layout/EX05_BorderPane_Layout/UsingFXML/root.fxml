@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Priority?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Pos?>
+<?import java.lang.*?>
+
+<BorderPane prefWidth="300" prefHeight="200" xmlns:fx="http://javafx.com/fxml/1">
+
+	<center>
+		<Button text="Center">
+			<maxHeight>
+				<Double fx:constant="MAX_VALUE"/>
+			</maxHeight>
+			<maxWidth>
+				<Double fx:constant="MAX_VALUE"/>
+			</maxWidth>
+			<BorderPane.alignment>
+				<Pos fx:constant="CENTER"/>			
+			</BorderPane.alignment>
+		</Button>	
+	</center>
+	<top>
+		<Button text="Top">
+			<maxHeight>
+				<Double fx:constant="MAX_VALUE"/>
+			</maxHeight>
+			<maxWidth>
+				<Double fx:constant="MAX_VALUE"/>
+			</maxWidth>
+			<BorderPane.alignment>
+				<Pos fx:constant="CENTER"/>			
+			</BorderPane.alignment>
+		</Button>	
+	</top>
+	<right>
+		<Button text="Right">
+			<maxHeight>
+				<Double fx:constant="MAX_VALUE"/>
+			</maxHeight>
+			<maxWidth>
+				<Double fx:constant="MAX_VALUE"/>
+			</maxWidth>
+			<BorderPane.alignment>
+				<Pos fx:constant="CENTER"/>			
+			</BorderPane.alignment>
+		</Button>	
+	</right>
+	<bottom>
+		<Button text="Bottom">
+			<maxHeight>
+				<Double fx:constant="MAX_VALUE"/>
+			</maxHeight>
+			<maxWidth>
+				<Double fx:constant="MAX_VALUE"/>
+			</maxWidth>
+			<BorderPane.alignment>
+				<Pos fx:constant="CENTER"/>			
+			</BorderPane.alignment>
+		</Button>	
+	</bottom>
+	<left>
+		<Button text="Left">
+			<maxHeight>
+				<Double fx:constant="MAX_VALUE"/>
+			</maxHeight>
+			<maxWidth>
+				<Double fx:constant="MAX_VALUE"/>
+			</maxWidth>
+			<BorderPane.alignment>
+				<Pos fx:constant="CENTER"/>			
+			</BorderPane.alignment>
+		</Button>	
+	</left>		
+</BorderPane>
+

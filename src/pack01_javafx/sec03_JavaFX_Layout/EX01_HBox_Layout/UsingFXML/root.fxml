@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Priority?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Pos?>
+<?import javafx.geometry.Insets?>
+<?import java.lang.*?>
+
+<HBox prefWidth="200" prefHeight="100" xmlns:fx="http://javafx.com/fxml/1">
+	<spacing>10</spacing>
+	<fillHeight>true</fillHeight>
+	<alignment>
+		<Pos fx:constant="CENTER"/>
+	</alignment>
+	
+	<children>
+		<Button text="btn1">		
+			<HBox.margin>
+				<Insets topRightBottomLeft="10"/>				
+			</HBox.margin>
+			<maxHeight>
+				<Double fx:constant="MAX_VALUE"/>
+			</maxHeight>		
+		</Button>
+		<Button text="btn2">
+			<HBox.hgrow>
+				<Priority fx:constant="ALWAYS"/>				
+			</HBox.hgrow>
+			<maxWidth>
+				<Double fx:constant="MAX_VALUE"/>
+			</maxWidth>		
+		</Button>
+	</children>
+</HBox>
+

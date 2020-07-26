@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+
+
+<HBox prefWidth="250"  xmlns:fx="http://javafx.com/fxml/1"> <!-- setter 메서드를 inline으로 포함 -->
+	<prefHeight>100</prefHeight> <!-- setter 메서드를 내부태그로 포함 --> 	
+	<spacing>20</spacing> <!-- setter 메서드를 내부태그로 포함 -->
+	<padding>
+		<Insets>
+			<topRightBottomLeft>50</topRightBottomLeft>
+		</Insets>		
+	</padding>
+	
+	<children>			
+		<Label>
+			<text>FXML 기본문법</text>
+		</Label>		
+		<Button text="클릭"/>				
+	</children> 	
+</HBox>
+

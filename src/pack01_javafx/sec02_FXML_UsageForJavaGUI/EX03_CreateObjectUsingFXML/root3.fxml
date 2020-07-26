@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import pack04_javafx.sec02_JavaUI_UsingFXML.EX08_CreateObjectUsingFXML.*?>
+
+<MyFXML fx:value="세번째 방법으로 객체 생성" xmlns:fx="http://javafx.com/fxml">
+
+</MyFXML>

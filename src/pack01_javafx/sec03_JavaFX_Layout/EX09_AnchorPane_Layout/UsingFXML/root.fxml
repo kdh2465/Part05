@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Priority?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Pos?>
+<?import javafx.geometry.Insets?>
+<?import java.lang.*?>
+
+<AnchorPane prefWidth="200" prefHeight="100" xmlns:fx="http://javafx.com/fxml/1">
+		
+	<children>
+		<Button text="btn1">
+			<AnchorPane.topAnchor>
+				<Double fx:value="10.0"/>			
+			</AnchorPane.topAnchor>
+			<AnchorPane.bottomAnchor>
+				<Double fx:value="60.0"/>			
+			</AnchorPane.bottomAnchor>
+			<AnchorPane.leftAnchor>
+				<Double fx:value="20.0"/>			
+			</AnchorPane.leftAnchor>
+			<AnchorPane.rightAnchor>
+				<Double fx:value="20.0"/>			
+			</AnchorPane.rightAnchor>
+		</Button>
+		
+		<Button text="btn2" layoutX="20" layoutY="60"/>	
+		
+		<Button text="btn3">
+			<AnchorPane.topAnchor>
+				<Double fx:value="60.0"/>			
+			</AnchorPane.topAnchor>
+			<AnchorPane.bottomAnchor>
+				<Double fx:value="10.0"/>			
+			</AnchorPane.bottomAnchor>
+			<AnchorPane.leftAnchor>
+				<Double fx:value="80.0"/>			
+			</AnchorPane.leftAnchor>
+			<AnchorPane.rightAnchor>
+				<Double fx:value="20.0"/>			
+			</AnchorPane.rightAnchor>
+		</Button>
+	</children>
+	
+</AnchorPane>
+

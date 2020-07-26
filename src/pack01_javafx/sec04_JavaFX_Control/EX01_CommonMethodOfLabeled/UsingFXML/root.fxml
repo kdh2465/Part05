@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Priority?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.geometry.Pos?>
+<?import javafx.geometry.Insets?>
+<?import java.lang.*?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.TextAlignment?>
+
+<HBox prefWidth="400" prefHeight="100" spacing="10" xmlns:fx="http://javafx.com/fxml">
+    <padding>
+    	<Insets topRightBottomLeft="10"/>
+    </padding>
+    
+    <children>
+    	<Label text="첫번째 Label이며 한줄안에 줄여서 표기" underline="true">
+    		<textFill>
+    			<Color fx:constant="RED"/>
+    		</textFill>
+    		<font>
+    			<Font size="15"/>
+    		</font>
+    	</Label>
+
+    	<Label wrapText="true" text="두번째 Label이며 여러 줄안에 줄여서 표기 (중앙정렬)">
+    		<textFill>
+    			<Color fx:constant="BLUE"/>
+    		</textFill>
+    		<textAlignment>
+    			<TextAlignment fx:constant="CENTER"/>
+    		</textAlignment>
+    	</Label>
+
+    	<Label wrapText="true" text="세번째 Label이며 여러 줄안에 줄여서 표기 (우측정렬)">
+    		<textFill>
+    			<Color fx:constant="GREEN"/>
+    		</textFill>
+    		<textAlignment>
+    			<TextAlignment fx:constant="CENTER"/>
+    		</textAlignment>
+    	</Label>
+    </children>	
+	
+</HBox>
+

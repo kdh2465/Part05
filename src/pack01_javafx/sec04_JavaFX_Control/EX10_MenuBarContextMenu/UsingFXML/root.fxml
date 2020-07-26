@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import java.lang.*?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.control.TreeItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.layout.Priority?>
+<?import javafx.geometry.HPos?>
+<?import javafx.geometry.Pos?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Orientation?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.TableCell?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableColumn.CellDataFeatures?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import pack04_javafx.sec04_JavaFX_Control.EX22_TableViewControl.UsingFXML.*?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import java.time.LocalDate?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.paint.Color?>
+
+<VBox prefWidth="250" prefHeight="150" xmlns:fx="http://javafx.com/fxml">
+	<children>
+		<MenuBar>
+			<Menu text="menu1">
+				<items>
+					<MenuItem text="menuItem11"/>
+					<MenuItem text="menuItem12"/>
+					<SeparatorMenuItem />
+					<MenuItem text="menuItem13"/>
+				</items>			
+			</Menu>
+			<Menu text="menu2">
+				<items>
+					<CheckMenuItem text="menuItem21"/>
+					<CheckMenuItem text="menuItem22"/>					
+					<CheckMenuItem text="menuItem23"/>
+				</items>
+			</Menu>
+			<Menu text="menu3">
+				<fx:define>
+					<ToggleGroup fx:id="toggleGroup"/>
+				</fx:define>
+				<items>
+					<RadioMenuItem text="menuItem31" toggleGroup="$toggleGroup"/>
+					<RadioMenuItem text="menuItem32" toggleGroup="$toggleGroup"/>					
+					<RadioMenuItem text="menuItem33" toggleGroup="$toggleGroup"/>
+				</items>
+			</Menu>
+			<Menu text="menu4">
+				<items>
+					<MenuItem text="menuItem41"/>
+					<MenuItem text="menuItem42"/>
+					<Menu text="submenu">
+						<items>
+							<MenuItem text="subMenuItem1"/>
+							<MenuItem text="subMenuItem2"/>						
+						</items>			
+					</Menu>
+				</items>			
+			</Menu>			
+		</MenuBar>
+		
+		<TextArea text="컨텍스트메뉴가 포함된 TextArea">
+			<contextMenu>
+				<ContextMenu>
+					<items>
+						<MenuItem text="context menu 1"/>
+						<MenuItem text="context menu 2"/>
+						<MenuItem text="context menu 3"/>
+					</items>
+				</ContextMenu>
+			</contextMenu>		
+		</TextArea>
+						
+	</children>	
+</VBox>
+

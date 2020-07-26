@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import java.lang.*?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.control.TreeItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.layout.Priority?>
+<?import javafx.geometry.HPos?>
+<?import javafx.geometry.Pos?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Orientation?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.TableCell?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableColumn.CellDataFeatures?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import pack04_javafx.sec04_JavaFX_Control.EX22_TableViewControl.UsingFXML.*?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import java.time.LocalDate?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import java.io.FileInputStream?>
+
+<HBox prefWidth="250" prefHeight="100" spacing="10" xmlns:fx="http://javafx.com/fxml"
+    fx:controller="pack04_javafx.sec04_JavaFX_Control.EX27_FileChooserDirectoryChooser.UsingFXML.MyController">
+	<alignment>
+		<Pos fx:constant="CENTER"/>
+	</alignment>
+	<children>
+		<Button fx:id="fileOpen" text="FileOpen" />
+		<Button fx:id="fileSave" text="FileSave" />
+		<Button fx:id="dirOpen" text="DirOpen" />						
+	</children>	
+</HBox>
+

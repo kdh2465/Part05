@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Priority?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.geometry.Pos?>
+<?import javafx.geometry.Insets?>
+<?import java.lang.*?>
+<?import javafx.scene.control.ToggleGroup?>
+
+
+<BorderPane prefWidth="250" prefHeight="150" xmlns:fx="http://javafx.com/fxml">
+	<padding>
+		<Insets topRightBottomLeft="10"/>
+	</padding>
+	<top>
+		<Label text="Label/Button/CheckBox/RadioButton"/>
+		<BorderPane.alignment>
+			<Pos fx:constant="CENTER"/>
+		</BorderPane.alignment>
+	</top>
+	
+	<center>
+		<HBox spacing="20">
+			<alignment>
+				<Pos fx:constant="CENTER"/>
+			</alignment>
+			<children>					
+				<VBox spacing="10">
+					<alignment>
+						<Pos fx:constant = "CENTER"/>
+					</alignment>
+					<children>
+						<CheckBox text="check #1" userData="첫번째 CheckBox" selected="true"/>
+						<CheckBox text="check #2" userData="두번째 CheckBox" />
+						<CheckBox text="check #3" userData="세번째 CheckBox" />			
+					</children>
+				</VBox>
+				
+				<VBox spacing="10">
+					<alignment>
+						<Pos fx:constant = "CENTER"/>
+					</alignment>					
+					<children>	
+						<fx:define> 
+							<ToggleGroup fx:id="toggleID"/>
+						</fx:define>					
+						<RadioButton text="radio #1" userData="첫번째 RadioButton" selected="true" toggleGroup="$toggleID"/>
+						<RadioButton text="radio #2" userData="두번째 RadioButton" toggleGroup="$toggleID"/>
+						<RadioButton text="radio #3" userData="세번째 RadioButton" toggleGroup="$toggleID"/>			
+					</children>
+				</VBox>
+			</children>
+		</HBox>
+	</center>
+	<bottom>
+		<HBox spacing="50">
+			<alignment>
+				<Pos fx:constant = "CENTER"/>
+			</alignment>
+			<children>
+				<Button text="취소"/>
+				<Button text="확인"/>
+			</children>
+		</HBox>
+	</bottom>		
+	
+</BorderPane>
+

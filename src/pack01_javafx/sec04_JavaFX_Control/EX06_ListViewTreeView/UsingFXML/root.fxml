@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import java.lang.*?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.control.TreeItem?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.Priority?>
+<?import javafx.geometry.HPos?>
+<?import javafx.geometry.Pos?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Orientation?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.collections.FXCollections?>
+
+<HBox prefWidth="250" prefHeight="200" fillHeight="false" xmlns:fx="http://javafx.com/fxml">
+	<alignment>	<Pos fx:constant="CENTER"/> </alignment>
+	<padding> <Insets topRightBottomLeft="10" /> </padding>
+	<children>
+		<ListView>
+			<items>
+				<FXCollections fx:factory="observableArrayList">
+					<String fx:value="ListItem1"/>
+					<String fx:value="ListItem2"/>
+					<String fx:value="ListItem3"/>
+				</FXCollections>
+			</items>		
+		</ListView>
+		
+		<TreeView>
+			<root>
+				<TreeItem value="root" expanded="true">
+					<children>
+						<TreeItem value="sub root1" expanded="true">
+							<children>
+								<TreeItem value="treeItem 11"/>
+								<TreeItem value="treeItem 12"/>								
+							</children>
+						</TreeItem>
+						<TreeItem value="sub root2" expanded="true">
+							<children>
+								<TreeItem value="treeItem 21"/>
+								<TreeItem value="treeItem 22"/>								
+							</children>
+						</TreeItem>
+					</children>
+				</TreeItem>
+			</root>		
+		</TreeView>
+	</children>	
+</HBox>
+

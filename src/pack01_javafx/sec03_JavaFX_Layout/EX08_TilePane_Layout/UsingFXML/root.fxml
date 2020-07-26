@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.Priority?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Pos?>
+<?import javafx.geometry.Insets?>
+<?import java.lang.*?>
+
+<TilePane prefWidth="300" prefHeight="100" xmlns:fx="http://javafx.com/fxml/1">
+	<prefTileWidth>60</prefTileWidth>
+	<prefTileHeight>60</prefTileHeight>
+	<hgap>10</hgap>
+	<vgap>10</vgap>
+	
+	<!-- TilePane 자체의 정렬 (default : TOP_LEFT) -->
+	<alignment>
+		<Pos fx:constant="CENTER"/>
+	</alignment>
+
+	<children>
+		<Button text="btn1">
+			<maxHeight>
+				<Double fx:constant="MAX_VALUE"/>			
+			</maxHeight>
+			<maxWidth>
+				<Double fx:constant="MAX_VALUE"/>				
+			</maxWidth>		
+		</Button>
+		<Button text="btn2">
+			<TilePane.alignment>
+				<Pos fx:constant="BOTTOM_RIGHT"/>			
+			</TilePane.alignment>		
+		</Button>					
+		<Button text="btn3">
+			<TilePane.alignment>
+				<Pos fx:constant="CENTER"/>			
+			</TilePane.alignment>		
+		</Button>	
+		<Button text="btn4">
+			<maxHeight>
+				<Double fx:constant="MAX_VALUE"/>			
+			</maxHeight>
+			<maxWidth>
+				<Double fx:constant="MAX_VALUE"/>				
+			</maxWidth>		
+		</Button>			
+	</children>
+	
+</TilePane>
+

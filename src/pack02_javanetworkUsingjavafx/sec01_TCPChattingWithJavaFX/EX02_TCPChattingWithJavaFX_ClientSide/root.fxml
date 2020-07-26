@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Priority?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Pos?>
+<?import java.lang.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.geometry.Orientation?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.collections.FXCollections?>
+
+
+<BorderPane prefWidth="600" prefHeight="300"
+	fx:controller="pack02_javanetworkUsingjavafx.sec01_TCPChattingWithJavaFX.EX02_TCPChattingWithJavaFX_ClientSide.MyController"
+	xmlns:fx="http://javafx.com/fxml">
+
+	<left>
+		<VBox spacing="5">
+			<padding>
+				<Insets topRightBottomLeft="10" />
+			</padding>
+			<alignment>
+				<Pos fx:constant="CENTER" />
+			</alignment>
+			<Label text="참석자" />
+			<ListView fx:id="listView" prefWidth="200">
+				<VBox.vgrow>
+					<Priority fx:constant="ALWAYS" />
+				</VBox.vgrow>
+			</ListView>
+			<Separator>
+				<orientation>
+					<Orientation fx:constant="HORIZONTAL" />
+				</orientation>
+
+			</Separator>
+			<HBox>
+				<alignment>
+					<Pos fx:constant="CENTER" />
+				</alignment>
+				<Label text="IP" prefWidth="40" />
+				<TextField fx:id="tf_ip" text="192.168.123.159"
+					promptText="서버 IP 입력">
+				</TextField>
+			</HBox>
+			<HBox>
+				<alignment>
+					<Pos fx:constant="CENTER" />
+				</alignment>
+				<Label text="Port" prefWidth="40" />
+				<TextField fx:id="tf_port" text="10000"
+					promptText="서버 Port 입력">
+				</TextField>
+			</HBox>
+
+
+			<Separator>
+				<orientation>
+					<Orientation fx:constant="HORIZONTAL" />
+				</orientation>
+
+			</Separator>
+			<HBox>
+				<alignment>
+					<Pos fx:constant="CENTER" />
+				</alignment>
+				<Label text="대화명" prefWidth="40" />
+				<TextField fx:id="tf_name" promptText="대화명입력">
+				</TextField>
+			</HBox>
+
+			<Separator>
+				<orientation>
+					<Orientation fx:constant="HORIZONTAL" />
+				</orientation>
+
+			</Separator>
+			<HBox spacing="10">
+				<alignment>
+					<Pos fx:constant="CENTER" />
+				</alignment>
+				<Button fx:id="btn_enter" text="참여하기" />
+				<Button fx:id="btn_exit" text="나가기" />
+			</HBox>
+		</VBox>
+	</left>
+
+
+	<center>
+		<VBox>
+			<padding>
+				<Insets topRightBottomLeft="10" />
+			</padding>
+			<alignment>
+				<Pos fx:constant="CENTER" />
+			</alignment>
+			<Label text="대화창" />
+			<TextArea fx:id="ta_clientText">
+				<VBox.vgrow>
+					<Priority fx:constant="ALWAYS" />
+				</VBox.vgrow>
+			</TextArea>
+			<Separator>
+				<orientation>
+					<Orientation fx:constant="HORIZONTAL" />
+				</orientation>
+				<VBox.margin>
+					<Insets top="10" bottom="5" />
+				</VBox.margin>
+			</Separator>
+			<HBox spacing="10">
+				<alignment>
+					<Pos fx:constant="CENTER" />
+				</alignment>
+				<Label text="대화상대 선택" />
+				<ComboBox fx:id="comboBox" value="전체사용자" >
+					<HBox.hgrow>
+						<Priority fx:constant="ALWAYS" />
+					</HBox.hgrow>
+					<items>
+						<FXCollections fx:factory="observableArrayList">
+							<String fx:value="전체사용자"/>
+						</FXCollections>					
+					</items>
+				</ComboBox>
+				<Button fx:id="btn_fileOpen" text="파일선택"/>				
+			</HBox>
+			<Separator>
+				<orientation>
+					<Orientation fx:constant="HORIZONTAL" />
+				</orientation>
+				<VBox.margin>
+					<Insets top="10" bottom="5" />
+				</VBox.margin>
+			</Separator>
+			<HBox spacing="5">
+				<alignment>
+					<Pos fx:constant="CENTER" />
+				</alignment>
+				<TextField fx:id="tf_text">
+					<HBox.hgrow>
+						<Priority fx:constant="ALWAYS" />
+					</HBox.hgrow>
+				</TextField>
+				<Button fx:id="btn_send" text="전송" />
+			</HBox>
+		</VBox>
+	</center>
+
+</BorderPane>
+

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import java.lang.*?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.control.TreeItem?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.Priority?>
+<?import javafx.geometry.HPos?>
+<?import javafx.geometry.Pos?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Orientation?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.TableCell?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableColumn.CellDataFeatures?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import pack04_javafx.sec04_JavaFX_Control.EX22_TableViewControl.UsingFXML.*?>
+
+<HBox prefWidth="250" prefHeight="200" fillHeight="false" xmlns:fx="http://javafx.com/fxml">
+	<alignment>	<Pos fx:constant="CENTER"/> </alignment>
+	<padding> <Insets topRightBottomLeft="10" /> </padding>
+	<children>
+		<TableView>
+		  	<columnResizePolicy>
+		  		<TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+		  	</columnResizePolicy>
+		  	
+		  	<columns>
+		  		<TableColumn>
+		  			<text>S-NUM</text>	
+		  			<cellValueFactory>
+		  				<PropertyValueFactory property="s_num"/>		  			
+		  			</cellValueFactory>	  		
+		  		</TableColumn>
+		  	</columns>
+		  	<columns>
+		  		<TableColumn>
+		  			<text>Name</text>	
+		  			<cellValueFactory>
+		  				<PropertyValueFactory property="name"/>		  			
+		  			</cellValueFactory>	  		
+		  		</TableColumn>
+		  	</columns>
+		
+			<items>
+				<FXCollections fx:factory="observableArrayList">
+					<Student s_num="11111111" name="학생1"/>
+					<Student s_num="22222222" name="학생2"/>
+				</FXCollections>
+			</items>	
+			<placeholder>
+            	<Label text="데이터가 없습니다."/>
+        	</placeholder>
+		</TableView>
+		
+	</children>	
+</HBox>
+

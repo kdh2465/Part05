@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import java.lang.*?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.Priority?>
+<?import javafx.geometry.HPos?>
+<?import javafx.geometry.Pos?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Orientation?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.control.ProgressIndicator?>
+
+<HBox prefWidth="250" prefHeight="150" fillHeight="false" xmlns:fx="http://javafx.com/fxml">
+	<alignment>	<Pos fx:constant="CENTER"/> </alignment>
+	<padding> <Insets topRightBottomLeft="10" /> </padding>
+	<children>
+		<VBox spacing="20">
+			<alignment>	<Pos fx:constant="CENTER"/> </alignment>
+			
+			<children>
+				<ProgressIndicator progress="0.1"/>
+				<ProgressBar progress="0.9"/>
+				<Slider min="100" max="200" value="150" showTickLabels="true" showTickMarks="true" majorTickUnit="25.0"/>		
+			</children>		
+		</VBox>
+		<ProgressBar style="-fx-accent:red" rotate="-90" progress="0.3"/>
+				<Slider value="50" showTickLabels="true" showTickMarks="true" majorTickUnit="25.0">
+					<orientation>
+						<Orientation fx:constant="VERTICAL"/>
+					</orientation>
+				</Slider>
+				
+	</children>	
+</HBox>
+

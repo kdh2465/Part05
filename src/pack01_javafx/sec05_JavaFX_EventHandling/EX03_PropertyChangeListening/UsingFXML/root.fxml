@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import java.lang.*?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.control.TreeItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.layout.Priority?>
+<?import javafx.geometry.HPos?>
+<?import javafx.geometry.Pos?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Orientation?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.TableCell?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableColumn.CellDataFeatures?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import pack04_javafx.sec04_JavaFX_Control.EX22_TableViewControl.UsingFXML.*?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import java.time.LocalDate?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import java.io.FileInputStream?>
+<?import javafx.scene.control.Separator?>
+
+<HBox prefWidth="450" prefHeight="150" spacing="10"
+  fx:controller="pack04_javafx.sec05_JavaFX_EventHandling.EX28_PropertyChangeListening.UsingFXML.MyController" 
+  xmlns:fx="http://javafx.com/fxml">
+  	<padding>
+  		<Insets topRightBottomLeft="10"/>
+  	</padding>
+	<children>
+		<VBox prefWidth="150" spacing="10">
+			<alignment>
+				<Pos fx:constant="CENTER"/>
+			</alignment>
+			<children>
+				<TextField fx:id="textField"/>
+				<Label fx:id="label1" text="글자수 : 0"/>			
+			</children>
+		</VBox>
+		<Separator>
+			<orientation>
+				<Orientation fx:constant="VERTICAL"/>
+			</orientation>
+		</Separator>
+		
+		<VBox prefWidth="150" spacing="10">
+			<alignment>
+				<Pos fx:constant="CENTER"/>
+			</alignment>
+			<children>
+				<CheckBox fx:id="checkBox" text="체크박스"/>
+				<Label fx:id="label2" text="체크 해제"/>			
+			</children>
+		</VBox>
+		
+		<Separator>
+			<orientation>
+				<Orientation fx:constant="VERTICAL"/>
+			</orientation>
+		</Separator>
+		
+		<VBox prefWidth="150" spacing="10">
+			<alignment>
+				<Pos fx:constant="CENTER"/>
+			</alignment>
+			<children>
+				<ComboBox fx:id="comboBox" value="item1">
+					<items>
+						<FXCollections fx:factory="observableArrayList">
+							<String fx:value="item1" />
+							<String fx:value="item2"/>
+							<String fx:value="item3"/>						
+						</FXCollections>
+					</items>
+				</ComboBox>				
+				<Label fx:id="label3" text="item1 선택"/>			
+			</children>
+		</VBox>
+									
+	</children>	
+</HBox>
+
