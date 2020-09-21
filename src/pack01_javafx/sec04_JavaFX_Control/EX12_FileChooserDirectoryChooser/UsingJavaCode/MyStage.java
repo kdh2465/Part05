@@ -1,4 +1,4 @@
-package pack01_javafx.sec04_JavaFX_Control.EX12_FileChooserDirectoryChooser.UsingJavaCode;
+ï»¿package pack01_javafx.sec04_JavaFX_Control.EX12_FileChooserDirectoryChooser.UsingJavaCode;
 
 import java.io.File;
 
@@ -21,7 +21,7 @@ public class MyStage extends Application{
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		
-		//#1. ·çÆ® ÄÁÅ×ÀÌ³Ê ¹× ÀÚ½Ä ³ëµå ±¸¼º
+		//#1. ë£¨íŠ¸ ì»¨í…Œì´ë„ˆ ë° ìì‹ ë…¸ë“œ êµ¬ì„±
 		HBox root = new HBox();
 		root.setPrefWidth(250);
 		root.setPrefHeight(100);
@@ -36,54 +36,54 @@ public class MyStage extends Application{
 				
 		//#1-1 FileChooser
 		FileChooser fileChooser = new FileChooser();		
-		fileChooser.setInitialFileName("initialSaveFileName"); //SaveDialog¿¡¼­ »ç¿ë
+		fileChooser.setInitialFileName("initialSaveFileName"); //SaveDialogì—ì„œ ì‚¬ìš©
 		fileChooser.setInitialDirectory(new File("d://filechoosertest//"));
 		
-		ExtensionFilter extFilter1 = new ExtensionFilter("pdf ÆÄÀÏ", "*.pdf"); 
-		ExtensionFilter extFilter2 = new ExtensionFilter("ÅØ½ºÆ® ÆÄÀÏ", "*.txt");
-		ExtensionFilter extFilter3 = new ExtensionFilter("¸ğµç ÆÄÀÏ", "*.*");				
+		ExtensionFilter extFilter1 = new ExtensionFilter("pdf íŒŒì¼", "*.pdf"); 
+		ExtensionFilter extFilter2 = new ExtensionFilter("í…ìŠ¤íŠ¸ íŒŒì¼", "*.txt");
+		ExtensionFilter extFilter3 = new ExtensionFilter("ëª¨ë“  íŒŒì¼", "*.*");				
 		fileChooser.getExtensionFilters().addAll(extFilter1, extFilter2, extFilter3);
 				
 		fileOpen.setOnAction((event)->{
 			//@OpenDialog
-			fileChooser.setTitle("FileChooser·Î ÆÄÀÏ ¿­±â");
+			fileChooser.setTitle("FileChooserë¡œ íŒŒì¼ ì—´ê¸°");
 			File openedFile = fileChooser.showOpenDialog(primaryStage);
 			if(openedFile!=null) { 
 				System.out.println("OpenedFile = "+openedFile.getName()); 
 			}
-			else { System.out.println("ÆÄÀÏ ¿­±â°¡ Ãë¼ÒµÇ¾ú½À´Ï´Ù."); 
+			else { System.out.println("íŒŒì¼ ì—´ê¸°ê°€ ì·¨ì†Œë˜ì—ˆìŠµë‹ˆë‹¤."); 
 			}
 		});
 		
 		fileSave.setOnAction((event)->{
-			//@SaveDialog : ½ÇÁ¦ ÆÄÀÏÀÇ ÀúÀåÀº Á÷Á¢ FileOutputStreamÀ» ÀÌ¿ëÇÏ¿© ÀÛ¼ºÇÏ¿©¾ß ÇÔ
-			fileChooser.setTitle("FileChooser·Î ÆÄÀÏ ÀúÀå");
+			//@SaveDialog : ì‹¤ì œ íŒŒì¼ì˜ ì €ì¥ì€ ì§ì ‘ FileOutputStreamì„ ì´ìš©í•˜ì—¬ ì‘ì„±í•˜ì—¬ì•¼ í•¨
+			fileChooser.setTitle("FileChooserë¡œ íŒŒì¼ ì €ì¥");
 			File savedFile = fileChooser.showSaveDialog(primaryStage);
 			if(savedFile!=null) { 
 				System.out.println("SavedFile = "+savedFile.getName()); 
 			}
-			else { System.out.println("ÆÄÀÏ ÀúÀåÀÌ Ãë¼ÒµÇ¾ú½À´Ï´Ù."); 
+			else { System.out.println("íŒŒì¼ ì €ì¥ì´ ì·¨ì†Œë˜ì—ˆìŠµë‹ˆë‹¤."); 
 			}
 		});
 		
 		dirOpen.setOnAction((event)->{
 			//#1-2 DirectoryChooser
 			DirectoryChooser directoryChooser = new DirectoryChooser();
-			directoryChooser.setTitle("DirectoryChooser·Î Æú´õ ¼±ÅÃÇÏ±â");				
+			directoryChooser.setTitle("DirectoryChooserë¡œ í´ë” ì„ íƒí•˜ê¸°");				
 			directoryChooser.setInitialDirectory(new File("D://directorychoosertest"));
 			
 			File selectedDir = directoryChooser.showDialog(primaryStage);
 			if(selectedDir!=null) { 
 				System.out.println("SelectedDir = "+selectedDir.getName()); 
 			}
-			else { System.out.println("Æú´õ¼±ÅÃÀÌ Ãë¼ÒµÇ¾ú½À´Ï´Ù."); 
+			else { System.out.println("í´ë”ì„ íƒì´ ì·¨ì†Œë˜ì—ˆìŠµë‹ˆë‹¤."); 
 			}		
 		});
 		
-		//#2. Scene ¼³Á¤
+		//#2. Scene ì„¤ì •
 		Scene scene = new Scene(root);
 		
-		//#3. Stage ¼³Á¤
+		//#3. Stage ì„¤ì •
 		primaryStage.setScene(scene);
 		primaryStage.show();
 	}

@@ -1,4 +1,4 @@
-package pack02_javanetworkUsingjavafx.sec02_UDPChattingWithJavaFX.EX02_UDPChattingWithJavaFX_ClientSide;
+﻿package pack02_javanetworkUsingjavafx.sec02_UDPChattingWithJavaFX.EX02_UDPChattingWithJavaFX_ClientSide;
 
 public class ProtocolCode {
 	

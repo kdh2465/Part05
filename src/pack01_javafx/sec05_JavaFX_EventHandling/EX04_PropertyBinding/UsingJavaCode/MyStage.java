@@ -1,4 +1,4 @@
-package pack01_javafx.sec05_JavaFX_EventHandling.EX04_PropertyBinding.UsingJavaCode;
+ï»¿package pack01_javafx.sec05_JavaFX_EventHandling.EX04_PropertyBinding.UsingJavaCode;
 
 import javafx.application.Application;
 import javafx.collections.ObservableList;
@@ -22,7 +22,7 @@ public class MyStage extends Application{
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		
-		//#1. ·çÆ® ÄÁÅ×ÀÌ³Ê ¹× ÀÚ½Ä ³ëµå ±¸¼º
+		//#1. ë£¨íŠ¸ ì»¨í…Œì´ë„ˆ ë° ìì‹ ë…¸ë“œ êµ¬ì„±
 		VBox root = new VBox();
 		root.setPrefWidth(300);
 		root.setPrefHeight(300);
@@ -48,7 +48,7 @@ public class MyStage extends Application{
 		hbox3.setSpacing(10);
 				
 		Slider slider = new Slider(-180,180,0);	
-		Label label = new Label("È¸Àü ÅØ½ºÆ®");
+		Label label = new Label("íšŒì „ í…ìŠ¤íŠ¸");
 		label.rotateProperty().bind(slider.valueProperty());		
 		HBox hbox4 = new HBox(slider, label);
 		hbox4.setSpacing(30);
@@ -67,10 +67,10 @@ public class MyStage extends Application{
 		children.add(new Separator(Orientation.HORIZONTAL));
 		children.add(hbox4);
 				 
-		//#2. Scene ¼³Á¤
+		//#2. Scene ì„¤ì •
 		Scene scene = new Scene(root);
 
-		//#3. Stage ¼³Á¤
+		//#3. Stage ì„¤ì •
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		

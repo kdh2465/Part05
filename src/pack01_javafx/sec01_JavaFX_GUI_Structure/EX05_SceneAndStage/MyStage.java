@@ -1,4 +1,4 @@
-package pack01_javafx.sec01_JavaFX_GUI_Structure.EX05_SceneAndStage;
+ï»¿package pack01_javafx.sec01_JavaFX_GUI_Structure.EX05_SceneAndStage;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
@@ -12,28 +12,28 @@ import javafx.stage.Stage;
 public class MyStage extends Application {
 		
 	@Override
-	//#1. ¸Å°³º¯¼ö·Î Stage Àü´Ş
+	//#1. ë§¤ê°œë³€ìˆ˜ë¡œ Stage ì „ë‹¬
 	public void start(Stage primaryStage) throws Exception {
 		
 		VBox parent = new VBox();
 		parent.setPrefWidth(200);
 		parent.setPrefHeight(100);
 		
-		//#1. Scene »ı¼ºÀÚ		
+		//#1. Scene ìƒì„±ì		
 		//Scene scene = new Scene(parent,Color.GREEN);
 		Scene scene = new Scene(parent,300,200,Color.BLUE);
 		//Scene scene = new Scene(parent,300,200,Color.RED);
 				
-		//#2. Stage ¸Ş¼­µå 1
-		primaryStage.setScene(scene); //SceneÁöÁ¤
-		primaryStage.setTitle("Scene & Stage"); //Å¸ÀÌÆ²ÁöÁ¤
-		primaryStage.setX(400); //StageÀÇ xÁÂÇ¥
-		primaryStage.setY(400); //StageÀÇ YÁÂÇ¥
-		primaryStage.setMaxWidth(800); //Stage ÃÖ´ëÆø ÁöÁ¤
-		primaryStage.setResizable(true); //Å©±âº¯°æ¿©ºÎÁöÁ¤(µğÆúÆ® true)
-		primaryStage.show(); //È­¸é¿¡ ¶ç¿ì±â		
-		//primaryStage.setWidth(400); //StageÀÇ Æø¼³Á¤
-		//primaryStage.setHeight(300); //StageÀÇ ³ôÀÌ¼³Á¤
+		//#2. Stage ë©”ì„œë“œ 1
+		primaryStage.setScene(scene); //Sceneì§€ì •
+		primaryStage.setTitle("Scene & Stage"); //íƒ€ì´í‹€ì§€ì •
+		primaryStage.setX(400); //Stageì˜ xì¢Œí‘œ
+		primaryStage.setY(400); //Stageì˜ Yì¢Œí‘œ
+		primaryStage.setMaxWidth(800); //Stage ìµœëŒ€í­ ì§€ì •
+		primaryStage.setResizable(true); //í¬ê¸°ë³€ê²½ì—¬ë¶€ì§€ì •(ë””í´íŠ¸ true)
+		primaryStage.show(); //í™”ë©´ì— ë„ìš°ê¸°		
+		//primaryStage.setWidth(400); //Stageì˜ í­ì„¤ì •
+		//primaryStage.setHeight(300); //Stageì˜ ë†’ì´ì„¤ì •
 		System.out.println("Parent : "+parent.getWidth()+" * "+parent.getHeight());
 		System.out.println("Scene  : "+scene.getWidth()+" * "+scene.getHeight());
 		System.out.println("Stage  : "+primaryStage.getWidth()+" * "+primaryStage.getHeight());
@@ -43,8 +43,8 @@ public class MyStage extends Application {
 		
 		
 				
-		/* ÄÁÅ×ÀÌ³Ê ¹è°æ»ö ÁöÁ¤¹æ¹ı
-		//¹è°æ»öÁöÁ¤¹æ¹ı (#1. Background°´Ã¼/#2. Style)
+		/* ì»¨í…Œì´ë„ˆ ë°°ê²½ìƒ‰ ì§€ì •ë°©ë²•
+		//ë°°ê²½ìƒ‰ì§€ì •ë°©ë²• (#1. Backgroundê°ì²´/#2. Style)
 		//parent.setBackground(new Background(new BackgroundFill(Color.RED,new CornerRadii(5),new Insets(10))));
 		//parent.setBackground(new Background(new BackgroundFill(Color.RED,null,null)));
 		//parent.setStyle("-fx-background-color: #ff000088");
@@ -52,21 +52,21 @@ public class MyStage extends Application {
 		parent.setBackground(new Background(new BackgroundFill(Color.BLUE,null,new Insets(10))));
 		*/
 		
-		/* ÄÁÆ®·Ñ ¹è°æ»ö ÁöÁ¤¹æ¹ı
-		//¹è°æ»öÁöÁ¤¹æ¹ı (#1. Background°´Ã¼/#2. Style)
+		/* ì»¨íŠ¸ë¡¤ ë°°ê²½ìƒ‰ ì§€ì •ë°©ë²•
+		//ë°°ê²½ìƒ‰ì§€ì •ë°©ë²• (#1. Backgroundê°ì²´/#2. Style)
 		//control.setBackground(new Background(new BackgroundFill(Color.RED,new CornerRadii(5),new Insets(10))));
 		//control.setBackground(new Background(new BackgroundFill(Color.RED,null,null)));
 		//control.setStyle("-fx-background-color: #ff000088");
 		//control.setStyle("-fx-background-color: rgba(255,0,0,0.0)");
 		control.setBackground(new Background(new BackgroundFill(Color.BLUE,null,new Insets(10))));
 		
-		¶Ç´Â
+		ë˜ëŠ”
 		control.setBackground(Color.RED);
 		*/
 		
 //
 //		//Scene scene = new Scene(parent);
-//		//#1. Scene ¸Ş¼­µå
+//		//#1. Scene ë©”ì„œë“œ
 //		System.out.println(parent.getWidth());
 //		System.out.println(scene.getHeight());
 //		
@@ -77,7 +77,7 @@ public class MyStage extends Application {
 //		primaryStage.setScene(scene);
 //		System.out.println(scene.getWidth());
 //		System.out.println(scene.getHeight());
-//		primaryStage.setTitle("Stage³»ÀÇ UI ±¸¼º ¹× ¹èÄ¡ÇÏ±â");
+//		primaryStage.setTitle("Stageë‚´ì˜ UI êµ¬ì„± ë° ë°°ì¹˜í•˜ê¸°");
 //		System.out.println(primaryStage.getWidth());
 //		System.out.println(primaryStage.getHeight());
 //		primaryStage.show();
@@ -85,7 +85,7 @@ public class MyStage extends Application {
 //		System.out.println(primaryStage.getWidth());
 //		System.out.println(primaryStage.getHeight());
 //		
-//		//#1. Scene ¸Ş¼­µå
+//		//#1. Scene ë©”ì„œë“œ
 //				System.out.println(parent.getWidth());
 //				System.out.println(scene.getHeight());
 //		
@@ -110,7 +110,7 @@ public class MyStage extends Application {
 //		});
 //		t.start();
 //		
-//		//#6. Stage¿¡ Scene Ãß°¡ 
+//		//#6. Stageì— Scene ì¶”ê°€ 
 //		for(int i=0; i<10; i++) {
 //			Thread.sleep(1000);
 //			if(i%2==0) {

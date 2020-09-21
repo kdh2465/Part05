@@ -1,4 +1,4 @@
-package pack02_javanetworkUsingjavafx.sec01_TCPChattingWithJavaFX.EX01_TCPChattingWithJavaFX_ServerSide;
+Ôªøpackage pack02_javanetworkUsingjavafx.sec01_TCPChattingWithJavaFX.EX01_TCPChattingWithJavaFX_ServerSide;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -20,7 +20,7 @@ public class User {
 		try {
 			dis=new DataInputStream(new BufferedInputStream(socket.getInputStream()));
 			dos=new DataOutputStream(new BufferedOutputStream(socket.getOutputStream()));
-		} catch (IOException e) {System.out.println("Ω∫∆Æ∏≤ ª˝º∫ Ω«∆–");}		
+		} catch (IOException e) {System.out.println("Ïä§Ìä∏Î¶º ÏÉùÏÑ± Ïã§Ìå®");}		
 	}
 	
 	void sendData(int code, String data) {
@@ -28,7 +28,7 @@ public class User {
 			dos.writeInt(code);
 			dos.writeUTF(data);
 			dos.flush();
-		} catch (IOException e) { System.out.println("µ•¿Ã≈Õ ¿¸º€Ω«∆–");}			
+		} catch (IOException e) { System.out.println("Îç∞Ïù¥ÌÑ∞ Ï†ÑÏÜ°Ïã§Ìå®");}			
 	}
 	
 	void sendData(int code, String data, String fromUser) {
@@ -37,7 +37,7 @@ public class User {
 			dos.writeUTF(data);
 			dos.writeUTF(fromUser);
 			dos.flush();
-		} catch (IOException e) { System.out.println("µ•¿Ã≈Õ ¿¸º€Ω«∆–");}		
+		} catch (IOException e) { System.out.println("Îç∞Ïù¥ÌÑ∞ Ï†ÑÏÜ°Ïã§Ìå®");}		
 	}
 	
 	void sendData(int code, String data, String fromUser, String toUser) {
@@ -47,14 +47,14 @@ public class User {
 			dos.writeUTF(fromUser);
 			dos.writeUTF(toUser);
 			dos.flush();
-		} catch (IOException e) { System.out.println("µ•¿Ã≈Õ ¿¸º€Ω«∆–");}			
+		} catch (IOException e) { System.out.println("Îç∞Ïù¥ÌÑ∞ Ï†ÑÏÜ°Ïã§Ìå®");}			
 	}
 	
 	void sendData(int length) {
 		try {					
 			dos.writeInt(length);
 			dos.flush();
-		} catch (IOException e) { System.out.println("µ•¿Ã≈Õ ¿¸º€Ω«∆–");}	
+		} catch (IOException e) { System.out.println("Îç∞Ïù¥ÌÑ∞ Ï†ÑÏÜ°Ïã§Ìå®");}	
 	}
 	
 	void sendData(int length, byte[] data) {
@@ -62,7 +62,7 @@ public class User {
 			dos.writeInt(length);					
 			dos.write(data, 0, length);
 			dos.flush();
-		} catch (IOException e) { System.out.println("µ•¿Ã≈Õ ¿¸º€Ω«∆–");}	
+		} catch (IOException e) { System.out.println("Îç∞Ïù¥ÌÑ∞ Ï†ÑÏÜ°Ïã§Ìå®");}	
 	}
 	
 	void sendFile(File file) throws IOException {		

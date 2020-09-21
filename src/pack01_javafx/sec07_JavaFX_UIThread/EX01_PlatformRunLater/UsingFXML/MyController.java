@@ -1,4 +1,4 @@
-package pack01_javafx.sec07_JavaFX_UIThread.EX01_PlatformRunLater.UsingFXML;
+ï»¿package pack01_javafx.sec07_JavaFX_UIThread.EX01_PlatformRunLater.UsingFXML;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -49,7 +49,7 @@ public class MyController implements Initializable{
 						}
 					});					
 				}
-				try {Thread.sleep(1);} catch (InterruptedException e) {} //ÀÌ°Ô ÀÖ¾î¾ß stopFlag¿¡ ¹İÀÀ
+				try {Thread.sleep(1);} catch (InterruptedException e) {} //ì´ê²Œ ìˆì–´ì•¼ stopFlagì— ë°˜ì‘
 			}
 		});
 		thread.setDaemon(true);

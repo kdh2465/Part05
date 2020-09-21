@@ -1,4 +1,4 @@
-package pack01_javafx.sec04_JavaFX_Control.EX04_TextInputControl.UsingJavaCode;
+ï»¿package pack01_javafx.sec04_JavaFX_Control.EX04_TextInputControl.UsingJavaCode;
 
 import javafx.application.Application;
 import javafx.collections.ObservableList;
@@ -43,10 +43,10 @@ public class MyStage extends Application{
 		children.addAll(vbox1,vbox2,vbox3);
 		
 		
-		//#2. Scene ¼³Á¤
+		//#2. Scene ì„¤ì •
 		Scene scene = new Scene(root);
 		
-		//#3. Stage ¼³Á¤
+		//#3. Stage ì„¤ì •
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		

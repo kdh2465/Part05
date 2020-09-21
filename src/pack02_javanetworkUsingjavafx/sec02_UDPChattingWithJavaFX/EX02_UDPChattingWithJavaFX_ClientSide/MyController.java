@@ -1,4 +1,4 @@
-package pack02_javanetworkUsingjavafx.sec02_UDPChattingWithJavaFX.EX02_UDPChattingWithJavaFX_ClientSide;
+ï»¿package pack02_javanetworkUsingjavafx.sec02_UDPChattingWithJavaFX.EX02_UDPChattingWithJavaFX_ClientSide;
 
 
 import java.io.BufferedOutputStream;
@@ -72,38 +72,38 @@ public class MyController implements Initializable{
 		btn_fileOpen.setOnAction((event)->{			
 			FileChooser fileChooser = new FileChooser();		
 			fileChooser.setInitialDirectory(new File("d://"));			
-			ExtensionFilter extFilter1 = new ExtensionFilter("¸ğµç ÆÄÀÏ", "*.*");		
-			ExtensionFilter extFilter2 = new ExtensionFilter("ÅØ½ºÆ® ÆÄÀÏ", "*.txt");
-			ExtensionFilter extFilter3 = new ExtensionFilter("pdf ÆÄÀÏ", "*.pdf"); 
+			ExtensionFilter extFilter1 = new ExtensionFilter("ëª¨ë“  íŒŒì¼", "*.*");		
+			ExtensionFilter extFilter2 = new ExtensionFilter("í…ìŠ¤íŠ¸ íŒŒì¼", "*.txt");
+			ExtensionFilter extFilter3 = new ExtensionFilter("pdf íŒŒì¼", "*.pdf"); 
 			fileChooser.getExtensionFilters().addAll(extFilter1, extFilter2, extFilter3);
 								
 			//@OpenDialog
-			fileChooser.setTitle("º¸³¾ ÆÄÀÏ ¼±ÅÃÇÏ±â");
+			fileChooser.setTitle("ë³´ë‚¼ íŒŒì¼ ì„ íƒí•˜ê¸°");
 			sendFile = fileChooser.showOpenDialog(primaryStage);
 			if(sendFile!=null) { 
 				System.out.println("OpenedFile = "+sendFile.getName());
 				tf_text.setText(sendFile.getAbsolutePath());
-				tf_text.setEditable(false); //ÆÄÀÏÀü¼ÛÀÇ °æ¿ì ÅØ½ºÆ® ÆíÁı ºÒ°¡ÇÏµµ·Ï (³ªÁß¿¡ Àü¼Û½Ã editableÀ» ±âÁØÀ¸·Î È®ÀÎ)
+				tf_text.setEditable(false); //íŒŒì¼ì „ì†¡ì˜ ê²½ìš° í…ìŠ¤íŠ¸ í¸ì§‘ ë¶ˆê°€í•˜ë„ë¡ (ë‚˜ì¤‘ì— ì „ì†¡ì‹œ editableì„ ê¸°ì¤€ìœ¼ë¡œ í™•ì¸)
 			}
-			else { System.out.println("ÆÄÀÏ ¿­±â°¡ Ãë¼ÒµÇ¾ú½À´Ï´Ù."); 
+			else { System.out.println("íŒŒì¼ ì—´ê¸°ê°€ ì·¨ì†Œë˜ì—ˆìŠµë‹ˆë‹¤."); 
 			}			
 		});
 		
 		btn_enter.setOnAction((event)->{
 						
-			//@IP¿Í Port¸¦ ÀĞ¾î¿Í ¼­¹ö Á¢¼Ó
+			//@IPì™€ Portë¥¼ ì½ì–´ì™€ ì„œë²„ ì ‘ì†
 			String str_ip = tf_ip.getText().trim();
 			String str_port=tf_port.getText().trim();			
 			if(str_ip!=null && str_port!=null && str_ip.length()!=0 && str_port.length()!=0) {
 				try {
-					datagramSocket = new DatagramSocket(); //³²Àº Æ÷Æ®·Î ¹ÙÀÎµù
+					datagramSocket = new DatagramSocket(); //ë‚¨ì€ í¬íŠ¸ë¡œ ë°”ì¸ë”©
 					
 					user = new User(datagramSocket, new InetSocketAddress(str_ip,Integer.parseInt(str_port)));
 					
-					//@ÃÖÃÊ ¼ÒÄÏ ¿¬°á ÀÌÈÄ ´ëÈ­¸í Àü¼Û 
+					//@ìµœì´ˆ ì†Œì¼“ ì—°ê²° ì´í›„ ëŒ€í™”ëª… ì „ì†¡ 
 					name = tf_name.getText().trim();
 					if(name.length()==0 || name==null) {
-						System.out.println("´ëÈ­¸íÀ» ÀÔ·ÂÇÏ¼¼¿ä");
+						System.out.println("ëŒ€í™”ëª…ì„ ì…ë ¥í•˜ì„¸ìš”");
 						return;
 					}
 					System.out.println(ProtocolCode.SEND_REQUEST_ENTER+", "+name);
@@ -158,7 +158,7 @@ public class MyController implements Initializable{
 									datagramSocket.receive(receivedPacket);
 									fromName = new String(receivedPacket.getData(),0,receivedPacket.getLength()).trim(); //data:filename
 		
-									printData("["+fromName+"] "+data + "ÆÄÀÏ ¼Û½Å"); //data=fileName
+									printData("["+fromName+"] "+data + "íŒŒì¼ ì†¡ì‹ "); //data=fileName
 		
 									File receivedFile = new File("src/pack04_javanetwork/download_files/"+data);
 									if(!receivedFile.exists()) receivedFile.createNewFile();
@@ -183,7 +183,7 @@ public class MyController implements Initializable{
 										int num=Integer.parseInt(new String(receivedPacket.getData(),0,receivedPacket.getLength()).trim());
 										if(num==-1) {
 											bos.close();
-											printData("File: "+data +" ÆÄÀÏ ¼ö½Å ¿Ï·á");
+											printData("File: "+data +" íŒŒì¼ ìˆ˜ì‹  ì™„ë£Œ");
 											break;
 										}
 										datagramSocket.receive(receivedPacket);
@@ -196,15 +196,15 @@ public class MyController implements Initializable{
 								}						
 							} catch (IOException e) {			
 								e.printStackTrace();
-								System.out.println("¸®¼Ò½º ÇØÁ¦");
+								System.out.println("ë¦¬ì†ŒìŠ¤ í•´ì œ");
 								break;										
 							}
 						}
 					});
 					
-				} catch (IOException e) {System.out.println("Å¬¶óÀÌ¾ğÆ® ¼ÒÄÏ¿­±â ½ÇÆĞ"); return;}
+				} catch (IOException e) {System.out.println("í´ë¼ì´ì–¸íŠ¸ ì†Œì¼“ì—´ê¸° ì‹¤íŒ¨"); return;}
 			} else {
-				System.out.println("IP¿Í Port¸¦ ÀÔ·ÂÇÏ¼¼¿ä!");
+				System.out.println("IPì™€ Portë¥¼ ì…ë ¥í•˜ì„¸ìš”!");
 				return;
 			}
 			
@@ -230,22 +230,22 @@ public class MyController implements Initializable{
 			String text = tf_text.getText().trim();
 			String toUser = comboBox.getValue();
 
-			if(tf_text.isEditable()) { //text Àü¼Û			
+			if(tf_text.isEditable()) { //text ì „ì†¡			
 				if(text.length()!=0 && text!=null) {
-					if(toUser.equals("ÀüÃ¼»ç¿ëÀÚ"))
+					if(toUser.equals("ì „ì²´ì‚¬ìš©ì"))
 						user.sendData(ProtocolCode.SEND_TEXT_TO_ALL, text, name);
 					else
 						user.sendData(ProtocolCode.SEND_TEXT_TO_USER, text, name, toUser);
 					tf_text.setText("");
 				}
-			} else { //file Àü¼Û
+			} else { //file ì „ì†¡
 				if(text.length()!=0 && text!=null) {
-					if(toUser.equals("ÀüÃ¼»ç¿ëÀÚ"))	{					
+					if(toUser.equals("ì „ì²´ì‚¬ìš©ì"))	{					
 
 						user.sendData(ProtocolCode.SEND_FILE_TO_ALL, text, name);
 						try {
 							user.sendFile(sendFile);
-							printData(text+" ÆÄÀÏ Àü¼Û");
+							printData(text+" íŒŒì¼ ì „ì†¡");
 						} catch (IOException e) {}						
 					}
 					else {
@@ -253,7 +253,7 @@ public class MyController implements Initializable{
 						user.sendData(ProtocolCode.SEND_FILE_TO_USER, text, name, toUser);
 						try {
 							user.sendFile(sendFile);
-							printData(text+" ÆÄÀÏ Àü¼Û");
+							printData(text+" íŒŒì¼ ì „ì†¡");
 						} catch (IOException e) {}	
 					}
 					tf_text.setText("");

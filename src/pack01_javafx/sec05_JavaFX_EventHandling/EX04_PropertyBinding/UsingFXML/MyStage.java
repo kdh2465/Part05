@@ -1,4 +1,4 @@
-package pack01_javafx.sec05_JavaFX_EventHandling.EX04_PropertyBinding.UsingFXML;
+ï»¿package pack01_javafx.sec05_JavaFX_EventHandling.EX04_PropertyBinding.UsingFXML;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -10,13 +10,13 @@ public class MyStage extends Application{
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		
-		//#1. fxml ·Îµù
+		//#1. fxml ë¡œë”©
 		VBox root = FXMLLoader.load(getClass().getResource("root.fxml"));
 				
-		//#2. Scene ¼³Á¤
+		//#2. Scene ì„¤ì •
 		Scene scene = new Scene(root);
 		
-		//#3. Stage ¼³Á¤
+		//#3. Stage ì„¤ì •
 		primaryStage.setScene(scene);
 		primaryStage.show();		
 	}

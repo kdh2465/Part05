@@ -1,4 +1,4 @@
-package pack01_javafx.sec06_javafx_css.EX02_JavaFX_AdoptingCSS.UsingFXML;
+Ôªøpackage pack01_javafx.sec06_javafx_css.EX02_JavaFX_AdoptingCSS.UsingFXML;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -11,18 +11,18 @@ public class MyStage extends Application{
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		
-		//#1. fxml ∑Œµ˘
+		//#1. fxml Î°úÎî©
 		//HBox root = FXMLLoader.load(getClass().getResource("root.fxml"));
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("root.fxml"));
 		VBox root = loader.load();
 		
-		//@JavaCodeø°º≠ Stylesheet ∞°¡Æø¿±‚
+		//@JavaCodeÏóêÏÑú Stylesheet Í∞ÄÏ†∏Ïò§Í∏∞
 		//root.getStylesheets().add(getClass().getResource("myStyle.css").toString());
 	
-		//#2. Scene º≥¡§
+		//#2. Scene ÏÑ§Ï†ï
 		Scene scene = new Scene(root);
 		
-		//#3. Stage º≥¡§
+		//#3. Stage ÏÑ§Ï†ï
 		primaryStage.setScene(scene);
 		primaryStage.show();		
 	}

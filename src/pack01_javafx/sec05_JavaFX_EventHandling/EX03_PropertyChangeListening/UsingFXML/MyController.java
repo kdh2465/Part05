@@ -1,4 +1,4 @@
-package pack01_javafx.sec05_JavaFX_EventHandling.EX03_PropertyChangeListening.UsingFXML;
+Ôªøpackage pack01_javafx.sec05_JavaFX_EventHandling.EX03_PropertyChangeListening.UsingFXML;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -27,7 +27,7 @@ public class MyController implements Initializable{
 			@Override
 			public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
 				System.out.println("OldValue = "+oldValue +"  newValue = "+newValue);
-				label1.setText("±€¿⁄ºˆ : "+newValue.length());
+				label1.setText("Í∏ÄÏûêÏàò : "+newValue.length());
 			}
 		});
 		//@checkBox property
@@ -37,9 +37,9 @@ public class MyController implements Initializable{
 				
 				// TODO Auto-generated method stub
 				if(newValue) {
-					label2.setText("√º≈© º±≈√");
+					label2.setText("Ï≤¥ÌÅ¨ ÏÑ†ÌÉù");
 				} else {
-					label2.setText("√º≈© «ÿ¡¶");
+					label2.setText("Ï≤¥ÌÅ¨ Ìï¥Ï†ú");
 				}
 			}
 		});
@@ -47,7 +47,7 @@ public class MyController implements Initializable{
 		comboBox.valueProperty().addListener(new ChangeListener<String>() {
 			@Override
 			public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-				label3.setText(newValue+" º±≈√");				
+				label3.setText(newValue+" ÏÑ†ÌÉù");				
 			}			
 		});
 		

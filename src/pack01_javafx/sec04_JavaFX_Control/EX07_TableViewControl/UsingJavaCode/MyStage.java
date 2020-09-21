@@ -1,4 +1,4 @@
-package pack01_javafx.sec04_JavaFX_Control.EX07_TableViewControl.UsingJavaCode;
+ï»¿package pack01_javafx.sec04_JavaFX_Control.EX07_TableViewControl.UsingJavaCode;
 
 import javafx.application.Application;
 import javafx.collections.FXCollections;
@@ -19,7 +19,7 @@ public class MyStage extends Application{
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		
-		//#1. ·çÆ® ÄÁÅ×ÀÌ³Ê ¹× ÀÚ½Ä ³ëµå ±¸¼º
+		//#1. ë£¨íŠ¸ ì»¨í…Œì´ë„ˆ ë° ìì‹ ë…¸ë“œ êµ¬ì„±
 		HBox root = new HBox();
 		root.setPrefWidth(250);
 		root.setPrefHeight(200);
@@ -28,7 +28,7 @@ public class MyStage extends Application{
 		root.setPadding(new Insets(10));
 		
 		//@TableView
-		//TableView<Student> tableView = new TableView<>(FXCollections.observableArrayList(new Student("11111111","ÇĞ»ı1")));
+		//TableView<Student> tableView = new TableView<>(FXCollections.observableArrayList(new Student("11111111","í•™ìƒ1")));
 		TableView<Student> tableView = new TableView<>();
 		TableColumn<Student, String> column1 = new TableColumn<>("S-Number");
 		column1.setCellValueFactory(new PropertyValueFactory<>("s_num"));
@@ -40,21 +40,21 @@ public class MyStage extends Application{
 		tableView.getColumns().add(column2);
 		tableView.setTableMenuButtonVisible(false);
 		
-		tableView.getItems().add(new Student("11111111","ÇĞ»ı1"));
-		tableView.getItems().add(new Student("22222222","ÇĞ»ı2"));
+		tableView.getItems().add(new Student("11111111","í•™ìƒ1"));
+		tableView.getItems().add(new Student("22222222","í•™ìƒ2"));
 	
-		//¸¶Áö¸· µ¥ÀÌÅÍ±îÁöÀÇ column¸¸ Ç¥±â (default = UNCON~ : µ¥ÀÌÅÍ°¡ ÀÖ´Â Column + 1)
+		//ë§ˆì§€ë§‰ ë°ì´í„°ê¹Œì§€ì˜ columnë§Œ í‘œê¸° (default = UNCON~ : ë°ì´í„°ê°€ ìˆëŠ” Column + 1)
 		tableView.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
-		//µ¥ÀÌÅÍ°¡ ¾øÀ»¶§ÀÇ Ç¥½Ã ³»¿ë
-		tableView.setPlaceholder(new Label("µ¥ÀÌÅÍ°¡ ¾ø½À´Ï´Ù."));
+		//ë°ì´í„°ê°€ ì—†ì„ë•Œì˜ í‘œì‹œ ë‚´ìš©
+		tableView.setPlaceholder(new Label("ë°ì´í„°ê°€ ì—†ìŠµë‹ˆë‹¤."));
 		
 		ObservableList<Node> children = root.getChildren();
 		children.add(tableView);
 		
-		//#2. Scene ¼³Á¤
+		//#2. Scene ì„¤ì •
 		Scene scene = new Scene(root);
 		
-		//#3. Stage ¼³Á¤
+		//#3. Stage ì„¤ì •
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		

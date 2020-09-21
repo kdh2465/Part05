@@ -1,4 +1,4 @@
-package pack01_javafx.sec04_JavaFX_Control.EX01_CommonMethodOfLabeled.UsingJavaCode;
+ï»¿package pack01_javafx.sec04_JavaFX_Control.EX01_CommonMethodOfLabeled.UsingJavaCode;
 
 import javafx.application.Application;
 import javafx.collections.ObservableList;
@@ -16,24 +16,24 @@ public class MyStage extends Application{
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		
-		//#1. ·çÆ® ÄÁÅ×ÀÌ³Ê ¹× ÀÚ½Ä ³ëµå ±¸¼º
+		//#1. ë£¨íŠ¸ ì»¨í…Œì´ë„ˆ ë° ìì‹ ë…¸ë“œ êµ¬ì„±
 		HBox root = new HBox();
 		root.setPrefWidth(400);
 		root.setPrefHeight(100);
 		root.setSpacing(10);
 		root.setPadding(new Insets(10));
 		
-		Label label1 = new Label("Ã¹¹øÂ° LabelÀÌ¸ç ÇÑÁÙ¾È¿¡ ÁÙ¿©¼­ Ç¥±â");
+		Label label1 = new Label("ì²«ë²ˆì§¸ Labelì´ë©° í•œì¤„ì•ˆì— ì¤„ì—¬ì„œ í‘œê¸°");
 		label1.setUnderline(true);
 		label1.setTextFill(Color.RED);		
 		label1.setFont(new Font(15));		
 		
-		Label label2 = new Label("µÎ¹øÂ° LabelÀÌ¸ç ¿©·¯ ÁÙ¾È¿¡ ÁÙ¿©¼­ Ç¥±â (Áß¾ÓÁ¤·Ä)");
+		Label label2 = new Label("ë‘ë²ˆì§¸ Labelì´ë©° ì—¬ëŸ¬ ì¤„ì•ˆì— ì¤„ì—¬ì„œ í‘œê¸° (ì¤‘ì•™ì •ë ¬)");
 		label2.setTextFill(Color.BLUE);		
 		label2.setWrapText(true);
 		label2.setTextAlignment(TextAlignment.CENTER);
 		
-		Label label3 = new Label("¼¼¹øÂ° LabelÀÌ¸ç ¿©·¯ ÁÙ¾È¿¡ ÁÙ¿©¼­ Ç¥±â (¿ìÃøÁ¤·Ä)");
+		Label label3 = new Label("ì„¸ë²ˆì§¸ Labelì´ë©° ì—¬ëŸ¬ ì¤„ì•ˆì— ì¤„ì—¬ì„œ í‘œê¸° (ìš°ì¸¡ì •ë ¬)");
 		label3.setTextFill(Color.GREEN);		
 		label3.setWrapText(true);
 		label3.setTextAlignment(TextAlignment.RIGHT);
@@ -41,10 +41,10 @@ public class MyStage extends Application{
 		ObservableList<Node> children = root.getChildren();
 		children.addAll(label1, label2, label3);
 		
-		//#2. Scene ¼³Á¤
+		//#2. Scene ì„¤ì •
 		Scene scene = new Scene(root);
 		
-		//#3. Stage ¼³Á¤
+		//#3. Stage ì„¤ì •
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		

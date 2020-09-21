@@ -1,4 +1,4 @@
-package pack01_javafx.sec07_JavaFX_UIThread.EX03_Async_Service.UsingFXML;
+Ôªøpackage pack01_javafx.sec07_JavaFX_UIThread.EX03_Async_Service.UsingFXML;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -10,13 +10,13 @@ public class MyStage extends Application{
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		
-	    //#1. FXML ∆ƒ¿œ ∑Œµ˘
+	    //#1. FXML ÌååÏùº Î°úÎî©
 	    VBox root = FXMLLoader.load(getClass().getResource("root.fxml"));
 		
-		//#2. Scene º≥¡§
+		//#2. Scene ÏÑ§Ï†ï
 		Scene scene = new Scene(root);
 		
-		//#3. Stage º≥¡§
+		//#3. Stage ÏÑ§Ï†ï
 		primaryStage.setScene(scene);
 		primaryStage.show();		
 	}

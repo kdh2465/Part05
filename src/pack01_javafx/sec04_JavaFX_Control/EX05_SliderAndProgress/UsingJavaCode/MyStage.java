@@ -1,4 +1,4 @@
-package pack01_javafx.sec04_JavaFX_Control.EX05_SliderAndProgress.UsingJavaCode;
+ï»¿package pack01_javafx.sec04_JavaFX_Control.EX05_SliderAndProgress.UsingJavaCode;
 
 import javafx.application.Application;
 import javafx.application.Platform;
@@ -20,7 +20,7 @@ public class MyStage extends Application{
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		
-		//#1. ·çÆ® ÄÁÅ×ÀÌ³Ê ¹× ÀÚ½Ä ³ëµå ±¸¼º
+		//#1. ë£¨íŠ¸ ì»¨í…Œì´ë„ˆ ë° ìì‹ ë…¸ë“œ êµ¬ì„±
 		HBox root = new HBox();
 		root.setPrefWidth(250);
 		root.setPrefHeight(150);
@@ -28,7 +28,7 @@ public class MyStage extends Application{
 		root.setFillHeight(false);
 		root.setPadding(new Insets(10));
 		
-		//@setProgress°ªÀ» ¼³Á¤ÇÏÁö ¾ÊÀ¸¸é ¾Ö´Ï¸ŞÀÌ¼ÇÀ¸·Î µ¿ÀÛ		
+		//@setProgressê°’ì„ ì„¤ì •í•˜ì§€ ì•Šìœ¼ë©´ ì• ë‹ˆë©”ì´ì…˜ìœ¼ë¡œ ë™ì‘		
 		ProgressIndicator pIndicator = new ProgressIndicator(0.1);
 		ProgressBar pBar1 = new ProgressBar(0.9);
 		
@@ -36,7 +36,7 @@ public class MyStage extends Application{
 		slider1.setValue(150);
 		slider1.setShowTickLabels(true);
 		slider1.setShowTickMarks(true);
-		slider1.setMajorTickUnit(25.0);//tick °£°İ
+		slider1.setMajorTickUnit(25.0);//tick ê°„ê²©
 		
 		Label label = new Label("test");
 		
@@ -53,28 +53,28 @@ public class MyStage extends Application{
 		slider2.setValue(50);
 		slider2.setShowTickLabels(true);
 		slider2.setShowTickMarks(true);
-		slider2.setMajorTickUnit(25.0);//tick °£°İ
+		slider2.setMajorTickUnit(25.0);//tick ê°„ê²©
 		slider2.setOrientation(Orientation.VERTICAL);
-		//slider2.setRotate(-90);//orientation°ú Â÷ÀÌ°¡ ÀÖÀ½
+		//slider2.setRotate(-90);//orientationê³¼ ì°¨ì´ê°€ ìˆìŒ
 		
 		
 		Thread t = new Thread(()->{	
 			System.out.println(Thread.currentThread().getName().toString());
 			for(int i=1; i<=100; i++) {		
 				final double k=i;
-				Platform.runLater(()->{	//Áï JavaFX Application Thread°¡ sleepÀÌ µÇÁö ¾Ê°Ô º°µµÀÇ ¾²·¹µå¸¦ »ı¼ºÇÏ¿© sleep ÁøÇà
+				Platform.runLater(()->{	//ì¦‰ JavaFX Application Threadê°€ sleepì´ ë˜ì§€ ì•Šê²Œ ë³„ë„ì˜ ì“°ë ˆë“œë¥¼ ìƒì„±í•˜ì—¬ sleep ì§„í–‰
 					pIndicator.setProgress(k/100.0);
 					pBar1.setProgress(k/100.0);
-					pBar2.setProgress(k/100.0);	//progress´Â ÀÏ¹İ ¾²·¹µå¿¡¼­µµ °¡´ÉÇÏÁö¸¸ ±¸ºĞ¾øÀÌ UI º¯°æÀºJavaFX Application ThreadÃ³¸®°¡ ¹Ù¶÷Á÷
+					pBar2.setProgress(k/100.0);	//progressëŠ” ì¼ë°˜ ì“°ë ˆë“œì—ì„œë„ ê°€ëŠ¥í•˜ì§€ë§Œ êµ¬ë¶„ì—†ì´ UI ë³€ê²½ì€JavaFX Application Threadì²˜ë¦¬ê°€ ë°”ëŒì§
 					slider1.setValue(k+100);
 					slider2.setValue(k);					
-					label.setText(k+"");		//labelÀº ¹İµå½Ã JavaFX Application Thread¿¡¼­¸¸ ¼öÁ¤ °¡´É			
+					label.setText(k+"");		//labelì€ ë°˜ë“œì‹œ JavaFX Application Threadì—ì„œë§Œ ìˆ˜ì • ê°€ëŠ¥			
 				});
-				try {Thread.sleep(200);} catch (InterruptedException e) {} // Áß¿ä. sleepÀº ¿ÜºÎ ¾²·¹µå¿¡¼­ µ¹¸®°í UIº¯°æ¸¸ Java Application Thread¿¡¼­ Ã³¸® (sleepÀ» runlater·Î ³Ñ±â¸é ±× ½Ã°£µ¿¾È UI lock)  
+				try {Thread.sleep(200);} catch (InterruptedException e) {} // ì¤‘ìš”. sleepì€ ì™¸ë¶€ ì“°ë ˆë“œì—ì„œ ëŒë¦¬ê³  UIë³€ê²½ë§Œ Java Application Threadì—ì„œ ì²˜ë¦¬ (sleepì„ runlaterë¡œ ë„˜ê¸°ë©´ ê·¸ ì‹œê°„ë™ì•ˆ UI lock)  
 			}
 		});
 		t.setDaemon(true);
-		//t.start(); 0.2ÃÊ´ç 1%¾¿ Áõ°¡
+		//t.start(); 0.2ì´ˆë‹¹ 1%ì”© ì¦ê°€
 		
 								
 		ObservableList<Node> children = root.getChildren();
@@ -82,10 +82,10 @@ public class MyStage extends Application{
 		children.add(pBar2);
 		children.add(slider2);		
 		
-		//#2. Scene ¼³Á¤
+		//#2. Scene ì„¤ì •
 		Scene scene = new Scene(root);
 		
-		//#3. Stage ¼³Á¤
+		//#3. Stage ì„¤ì •
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		

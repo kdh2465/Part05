@@ -1,4 +1,4 @@
-package pack01_javafx.sec07_JavaFX_UIThread.EX02_Async_Task.UsingFXML;
+ï»¿package pack01_javafx.sec07_JavaFX_UIThread.EX02_Async_Task.UsingFXML;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -77,23 +77,23 @@ public class MyController implements Initializable{
 					}
 					try {Thread.sleep(1);} catch (InterruptedException e) {						
 						return null;
-					} //ÀÌ°Ô ÀÖ¾î¾ß stopFlag¿¡ ¹İÀÀ (¹«ÇÑ ·çÇÁ¿¡¼­ interrupt() ¼öÇàÀ» À§ÇØ¼­ÀÎµíÇÔ)								
+					} //ì´ê²Œ ìˆì–´ì•¼ stopFlagì— ë°˜ì‘ (ë¬´í•œ ë£¨í”„ì—ì„œ interrupt() ìˆ˜í–‰ì„ ìœ„í•´ì„œì¸ë“¯í•¨)								
 				}				
 			}	
 			
 			@Override
 			protected void succeeded() {				
-				laptime_ta.appendText("¼º°ø\n");
+				laptime_ta.appendText("ì„±ê³µ\n");
 			}
 		
 			@Override
 			protected void failed() {				
-				laptime_ta.appendText("½ÇÆĞ\n");
+				laptime_ta.appendText("ì‹¤íŒ¨\n");
 			}
 			
 			@Override
 			protected void cancelled() {				
-				laptime_ta.appendText("Ãë¼Ò\n");
+				laptime_ta.appendText("ì·¨ì†Œ\n");
 			}
 		};
 		task.valueProperty().addListener(new ChangeListener<String>() {

@@ -1,4 +1,4 @@
-package pack01_javafx.sec04_JavaFX_Control.EX09_DatePickerColorPicker.UsingJavaCode;
+ï»¿package pack01_javafx.sec04_JavaFX_Control.EX09_DatePickerColorPicker.UsingJavaCode;
 
 import java.time.LocalDate;
 
@@ -19,7 +19,7 @@ public class MyStage extends Application{
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		
-		//#1. ·çÆ® ÄÁÅ×ÀÌ³Ê ¹× ÀÚ½Ä ³ëµå ±¸¼º
+		//#1. ë£¨íŠ¸ ì»¨í…Œì´ë„ˆ ë° ìì‹ ë…¸ë“œ êµ¬ì„±
 		HBox root = new HBox();
 		root.setPrefWidth(300);
 		root.setPrefHeight(100);
@@ -30,8 +30,8 @@ public class MyStage extends Application{
 		
 		//@DatePicker
 		DatePicker datePicker = new DatePicker();
-		//datePicker.setValue(LocalDate.of(2030,1,1)); //Æ¯Á¤³¯Â¥
-		datePicker.setValue(LocalDate.now()); //ÇöÀç³¯Â¥
+		//datePicker.setValue(LocalDate.of(2030,1,1)); //íŠ¹ì •ë‚ ì§œ
+		datePicker.setValue(LocalDate.now()); //í˜„ì¬ë‚ ì§œ
 		
 		//@ColorPicker
 		ColorPicker colorPicker = new ColorPicker();
@@ -42,10 +42,10 @@ public class MyStage extends Application{
 		children.add(datePicker);
 		children.add(colorPicker);
 		
-		//#2. Scene ¼³Á¤
+		//#2. Scene ì„¤ì •
 		Scene scene = new Scene(root);
 		
-		//#3. Stage ¼³Á¤
+		//#3. Stage ì„¤ì •
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		

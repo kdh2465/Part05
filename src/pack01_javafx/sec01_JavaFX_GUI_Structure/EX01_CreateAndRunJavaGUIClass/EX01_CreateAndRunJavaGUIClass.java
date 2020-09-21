@@ -1,10 +1,10 @@
-package pack01_javafx.sec01_JavaFX_GUI_Structure.EX01_CreateAndRunJavaGUIClass;
+ï»¿package pack01_javafx.sec01_JavaFX_GUI_Structure.EX01_CreateAndRunJavaGUIClass;
 
 public class EX01_CreateAndRunJavaGUIClass {
 	public static void main(String[] args) {
 
-		//ÀÌ·¸°Ô º°µµ·Î ±¸¼ºÇÒ ¼ö ÀÖÀ¸³ª ¹İµå½Ã Application Å¬·¡½º´Â public ÀÌ¾î¾ß ÇÔ
-        //main ÇÔ¼ö°¡ Æ÷ÇÔµÈ Å¬·¡½º°¡ Á÷Á¢ Application Å¬·¡½º¸¦ È£ÃâÇÏ´Â °æ¿ì launch(args)·Î¸¸ °¡´É
+		//ì´ë ‡ê²Œ ë³„ë„ë¡œ êµ¬ì„±í•  ìˆ˜ ìˆìœ¼ë‚˜ ë°˜ë“œì‹œ Application í´ë˜ìŠ¤ëŠ” public ì´ì–´ì•¼ í•¨
+        //main í•¨ìˆ˜ê°€ í¬í•¨ëœ í´ë˜ìŠ¤ê°€ ì§ì ‘ Application í´ë˜ìŠ¤ë¥¼ í˜¸ì¶œí•˜ëŠ” ê²½ìš° launch(args)ë¡œë§Œ ê°€ëŠ¥
 		MyStage.launch(MyStage.class, args);
 		
 	}

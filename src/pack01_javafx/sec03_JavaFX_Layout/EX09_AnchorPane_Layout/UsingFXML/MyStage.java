@@ -1,4 +1,4 @@
-package pack01_javafx.sec03_JavaFX_Layout.EX09_AnchorPane_Layout.UsingFXML;
+ï»¿package pack01_javafx.sec03_JavaFX_Layout.EX09_AnchorPane_Layout.UsingFXML;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -13,10 +13,10 @@ public class MyStage extends Application{
 		//#1. AnchorPane_Using FXML
 		AnchorPane root = FXMLLoader.load(getClass().getResource("root.fxml"));
 			
-		//#2. Scene ¼³Á¤
+		//#2. Scene ì„¤ì •
 		Scene scene = new Scene(root);
 		
-		//#3. Stage ¼³Á¤
+		//#3. Stage ì„¤ì •
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		

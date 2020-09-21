@@ -1,4 +1,4 @@
-package pack02_javanetworkUsingjavafx.sec02_UDPChattingWithJavaFX.EX01_UDPChattingWithJavaFX_ServerSide;
+ï»¿package pack02_javanetworkUsingjavafx.sec02_UDPChattingWithJavaFX.EX01_UDPChattingWithJavaFX_ServerSide;
 
 
 import java.io.IOException;
@@ -42,7 +42,7 @@ public class MyController implements Initializable{
 		 
 		btn_serverStop.setDisable(true);
 				
-		//@¼­ºñ½º ½ÃÀÛ (Æ÷Æ®¹øÈ£ ¿£ÅÍ ¶Ç´Â ½ÃÀÛ¹öÆ°)
+		//@ì„œë¹„ìŠ¤ ì‹œì‘ (í¬íŠ¸ë²ˆí˜¸ ì—”í„° ë˜ëŠ” ì‹œì‘ë²„íŠ¼)
 		EventHandler<ActionEvent> eventHandler = (event)->{
 			String str = tf_portNum.getText().trim();
 			int port=0;
@@ -52,22 +52,22 @@ public class MyController implements Initializable{
 				tf_portNum.setDisable(true);
 				btn_serverStart.setDisable(true);
 				btn_serverStop.setDisable(false);				
-				tf_serverState.setText("¼­ºñ½º ½ÃÀÛ »óÅÂ");				
+				tf_serverState.setText("ì„œë¹„ìŠ¤ ì‹œì‘ ìƒíƒœ");				
 			} else {
-				System.out.println("Æ÷Æ®¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä!");
+				System.out.println("í¬íŠ¸ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš”!");
 				return;
 			}
 		};				
 		tf_portNum.setOnAction(eventHandler);
 		btn_serverStart.setOnAction(eventHandler);
 		
-		//@¼­ºñ½º Á¾·á
+		//@ì„œë¹„ìŠ¤ ì¢…ë£Œ
 		btn_serverStop.setOnAction(event->{			
 			serverThread.datagramSocket.close();
 			tf_portNum.setDisable(false);
 			btn_serverStart.setDisable(false);
 			btn_serverStop.setDisable(true);
-			tf_serverState.setText("¼­ºñ½º ÁßÁö »óÅÂ");			
+			tf_serverState.setText("ì„œë¹„ìŠ¤ ì¤‘ì§€ ìƒíƒœ");			
 		});
 	}
 	
@@ -77,27 +77,27 @@ public class MyController implements Initializable{
 		
 		public ServerThread(int port) {
 			try {				
-				datagramSocket=new DatagramSocket(port);//ÀÔ·ÂµÈ port¿¡ ¹ÙÀÎµù					
+				datagramSocket=new DatagramSocket(port);//ì…ë ¥ëœ portì— ë°”ì¸ë”©					
 			} catch (IOException e) {
-				printLog("ÇØ´ç Æ÷Æ®¸¦ ¿­ ¼ö ¾ø½À´Ï´Ù.");
+				printLog("í•´ë‹¹ í¬íŠ¸ë¥¼ ì—´ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 				return;
 			}
-			//@¼­ºñ½º ½ÃÀÛ ·Î±× ÀÛ¼º
+			//@ì„œë¹„ìŠ¤ ì‹œì‘ ë¡œê·¸ ì‘ì„±
 			Platform.runLater(()->{
 				try {
-					printLog("¼­ºñ½º ½ÃÀÛ ("+InetAddress.getLocalHost().getHostAddress()+")");
+					printLog("ì„œë¹„ìŠ¤ ì‹œì‘ ("+InetAddress.getLocalHost().getHostAddress()+")");
 				} catch (UnknownHostException e) {
-					printLog("¼­ºñ½º ½ÃÀÛ ½ÇÆĞ");
+					printLog("ì„œë¹„ìŠ¤ ì‹œì‘ ì‹¤íŒ¨");
 				}
 			});			
-			start(); //°´Ã¼ »ı¼ºÈÄ ¹Ù·Î ½ÃÀÛ
+			start(); //ê°ì²´ ìƒì„±í›„ ë°”ë¡œ ì‹œì‘
 		}
 		@Override
 		public void run() {
 			byte[] receivedData = new byte[65508];
 			DatagramPacket receivedPacket = new DatagramPacket(receivedData, receivedData.length);
 						
-			while(true) { //Å¬¶óÀÌ¾ğÆ® Á¢¼Ó ´ë±â + Á¢¼Ó½Ã »ç¿ëÀÚ Ãß°¡
+			while(true) { //í´ë¼ì´ì–¸íŠ¸ ì ‘ì† ëŒ€ê¸° + ì ‘ì†ì‹œ ì‚¬ìš©ì ì¶”ê°€
 				
 				try {
 					datagramSocket.receive(receivedPacket);
@@ -113,7 +113,7 @@ public class MyController implements Initializable{
 				
 					switch(code) {
 					
-					case ProtocolCode.SEND_REQUEST_ENTER: //UDP´Â Âü°¡ÇÏ±âµµ ´Ù¸¥  case¿Í µ¿ÀÏ ·¹º§·Î ÀÛ¼º (TCP¿Í ´Ù¸¥Á¡)
+					case ProtocolCode.SEND_REQUEST_ENTER: //UDPëŠ” ì°¸ê°€í•˜ê¸°ë„ ë‹¤ë¥¸  caseì™€ ë™ì¼ ë ˆë²¨ë¡œ ì‘ì„± (TCPì™€ ë‹¤ë¥¸ì )
 												
 						User user = new User(datagramSocket, receivedPacket.getSocketAddress());
 						users.put(data, user);		
@@ -121,7 +121,7 @@ public class MyController implements Initializable{
 						if(data!=null) {																
 							Platform.runLater(()->{
 								listView.getItems().add(data);
-								label.setText("Âü¼®ÀÚ ("+users.size()+")");
+								label.setText("ì°¸ì„ì ("+users.size()+")");
 								printLog(data+"("+user.socketAddress+") Connected");
 							});
 						} 
@@ -154,7 +154,7 @@ public class MyController implements Initializable{
 						}
 						
 						Platform.runLater(()->{
-							label.setText("Âü¼®ÀÚ ("+users.size()+")");
+							label.setText("ì°¸ì„ì ("+users.size()+")");
 							printLog(data+"("+removeSocketAddress+") Disconnected ");								
 							//printLog(data+"("+") Disconnected ");
 						});
@@ -227,7 +227,7 @@ public class MyController implements Initializable{
 						
 						fileName = data.substring(data.lastIndexOf("\\")+1);
 
-						users.get(fromUser).sendData(ProtocolCode.ADD_TEXT, fileName+ "ÆÄÀÏ Àü¼Û", fromUser);
+						users.get(fromUser).sendData(ProtocolCode.ADD_TEXT, fileName+ "íŒŒì¼ ì „ì†¡", fromUser);
 						users.get(toUser).sendData(ProtocolCode.ADD_FILE, fileName, fromUser);
 														
 						while(true) {	
@@ -245,7 +245,7 @@ public class MyController implements Initializable{
 						}
 					}
 				} catch (Exception e) {
-					Platform.runLater(()->printLog("¼­ºñ½º Á¾·á")); //UI ¾²·¹µå°¡ ¾Æ´Ï±â ¶§¹®				
+					Platform.runLater(()->printLog("ì„œë¹„ìŠ¤ ì¢…ë£Œ")); //UI ì“°ë ˆë“œê°€ ì•„ë‹ˆê¸° ë•Œë¬¸				
 					break;
 				}
 			}

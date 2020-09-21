@@ -1,11 +1,11 @@
-package pack01_javafx.sec02_FXML_UsageForJavaGUI.EX03_CreateObjectUsingFXML;
+ï»¿package pack01_javafx.sec02_FXML_UsageForJavaGUI.EX03_CreateObjectUsingFXML;
 
 import javafx.beans.NamedArg;
 
 public class MyFXML {
 	String str;
 	public MyFXML() {
-		str = "Ã¹¹øÂ° ¹æ¹ıÀ¸·Î °´Ã¼ »ı¼º";
+		str = "ì²«ë²ˆì§¸ ë°©ë²•ìœ¼ë¡œ ê°ì²´ ìƒì„±";
 	}
 	public MyFXML(@NamedArg("str") String str){
 		this.str = str;
@@ -14,6 +14,6 @@ public class MyFXML {
 		return new MyFXML(str);
 	}
 	public static MyFXML getInstance() {
-		return new MyFXML("³×¹øÂ° ¹æ¹ıÀ¸·Î °´Ã¼ »ı¼º");
+		return new MyFXML("ë„¤ë²ˆì§¸ ë°©ë²•ìœ¼ë¡œ ê°ì²´ ìƒì„±");
 	}
 }

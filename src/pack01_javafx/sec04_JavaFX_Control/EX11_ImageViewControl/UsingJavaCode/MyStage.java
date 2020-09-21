@@ -1,4 +1,4 @@
-package pack01_javafx.sec04_JavaFX_Control.EX11_ImageViewControl.UsingJavaCode;
+ï»¿package pack01_javafx.sec04_JavaFX_Control.EX11_ImageViewControl.UsingJavaCode;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -22,38 +22,38 @@ public class MyStage extends Application{
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		
-		//#1. ·çÆ® ÄÁÅ×ÀÌ³Ê ¹× ÀÚ½Ä ³ëµå ±¸¼º
+		//#1. ë£¨íŠ¸ ì»¨í…Œì´ë„ˆ ë° ìì‹ ë…¸ë“œ êµ¬ì„±
 		VBox root = new VBox();
 		root.setPrefWidth(250);
 		root.setPrefHeight(150);
 
-		//@ImageView=== controlÀº ¾Æ´Ï°í Àå½Ä¿ë
+		//@ImageView=== controlì€ ì•„ë‹ˆê³  ì¥ì‹ìš©
 		String url1 = getClass().getResource("..//resources//images//coffee.jpg").toString();
 		ImageView imageView1 = new ImageView();
 		imageView1.setImage(new Image(url1));
 		imageView1.setFitWidth(250);
 		imageView1.setPreserveRatio(true); 
 			
-		//@ ¹öÆ°°ú ·¹ÀÌºíÀÇ ÀÌ¹ÌÁö ºä È°¿ë
+		//@ ë²„íŠ¼ê³¼ ë ˆì´ë¸”ì˜ ì´ë¯¸ì§€ ë·° í™œìš©
 		String url2 = getClass().getResource("..//resources//icons//icon_a.png").toString();
-		Menu menu = new Menu("¸Ş´º", new ImageView(url2));
+		Menu menu = new Menu("ë©”ë‰´", new ImageView(url2));
 		MenuBar menuBar = new  MenuBar(menu);
 		
 		String url3 = getClass().getResource("..//resources//icons//icon_b.png").toString();
-		Button btn = new Button("¹öÆ°", new ImageView(url3));
+		Button btn = new Button("ë²„íŠ¼", new ImageView(url3));
 		
 		String url4 = getClass().getResource("..//resources//icons//icon_c.png").toString();
-		Label label = new Label("·¹ÀÌºí", new ImageView(url4));
+		Label label = new Label("ë ˆì´ë¸”", new ImageView(url4));
 			
 		ObservableList<Node> children = root.getChildren();
 		children.add(menuBar);
 		children.add(imageView1);
 		children.add(new HBox(btn,label));
 		
-		//#2. Scene ¼³Á¤
+		//#2. Scene ì„¤ì •
 		Scene scene = new Scene(root);
 		
-		//#3. Stage ¼³Á¤
+		//#3. Stage ì„¤ì •
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		

@@ -1,4 +1,4 @@
-package pack01_javafx.sec04_JavaFX_Control.EX08_ChoiceBoxAndComboBox.UsingJavaCode;
+ï»¿package pack01_javafx.sec04_JavaFX_Control.EX08_ChoiceBoxAndComboBox.UsingJavaCode;
 
 import javafx.application.Application;
 import javafx.collections.FXCollections;
@@ -34,9 +34,9 @@ public class MyStage extends Application{
 		for(int i=0; i<20; i++)
 			oblist1.add("choice "+i);
 		choiceBox.setItems(oblist1);
-		choiceBox.setValue("choice 0"); //¼±ÅÃ°ª ¼³Á¤
+		choiceBox.setValue("choice 0"); //ì„ íƒê°’ ì„¤ì •
 		
-		//getItemÀ» ÀÌ¿ëÇÑ ¹æ¹ý (ÄÚµå¿¡¼­´Â ÀÌ°Ô ÆíÇÏÁö¸¸ getItems¿Í setItems°¡ ¸ðµÎ ÀÖ¾î fxml¿¡¼­´Â À§ÀÇ ÇüÅÂ·Î¸¸ °¡´É
+		//getItemì„ ì´ìš©í•œ ë°©ë²• (ì½”ë“œì—ì„œëŠ” ì´ê²Œ íŽ¸í•˜ì§€ë§Œ getItemsì™€ setItemsê°€ ëª¨ë‘ ìžˆì–´ fxmlì—ì„œëŠ” ìœ„ì˜ í˜•íƒœë¡œë§Œ ê°€ëŠ¥
 		//choiceBox.getItems().addAll("choice 1", "choice 2", "choice 3");
 
 		//@ComboBox
@@ -47,20 +47,20 @@ public class MyStage extends Application{
 			oblist2.add("combo " + i);
 		comboBox.setItems(oblist2);
 		comboBox.setValue("combo 0");
-		comboBox.setPlaceholder(new Label("µ¥ÀÌÅÍ ¾øÀ½"));
+		comboBox.setPlaceholder(new Label("ë°ì´í„° ì—†ìŒ"));
 		comboBox.setVisibleRowCount(3);
 		
-		//getItemÀ» ÀÌ¿ëÇÑ ¹æ¹ý (ÄÚµå¿¡¼­´Â ÀÌ°Ô ÆíÇÏÁö¸¸ getItems¿Í setItems°¡ ¸ðµÎ ÀÖ¾î fxml¿¡¼­´Â À§ÀÇ ÇüÅÂ·Î¸¸ °¡´É
+		//getItemì„ ì´ìš©í•œ ë°©ë²• (ì½”ë“œì—ì„œëŠ” ì´ê²Œ íŽ¸í•˜ì§€ë§Œ getItemsì™€ setItemsê°€ ëª¨ë‘ ìžˆì–´ fxmlì—ì„œëŠ” ìœ„ì˜ í˜•íƒœë¡œë§Œ ê°€ëŠ¥
 		//comboBox.getItems().addAll("combo 1", "combo 2", "combo 3");
 				
 		ObservableList<Node> children = root.getChildren();
 		children.add(choiceBox);
 		children.add(comboBox);
 		
-		//#2. Scene ¼³Á¤
+		//#2. Scene ì„¤ì •
 		Scene scene = new Scene(root);
 		
-		//#3. Stage ¼³Á¤
+		//#3. Stage ì„¤ì •
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		

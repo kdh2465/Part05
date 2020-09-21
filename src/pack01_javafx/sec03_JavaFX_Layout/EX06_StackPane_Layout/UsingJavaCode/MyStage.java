@@ -1,4 +1,4 @@
-package pack01_javafx.sec03_JavaFX_Layout.EX06_StackPane_Layout.UsingJavaCode;
+ï»¿package pack01_javafx.sec03_JavaFX_Layout.EX06_StackPane_Layout.UsingJavaCode;
 
 import javafx.application.Application;
 import javafx.collections.ObservableList;
@@ -14,18 +14,18 @@ public class MyStage extends Application{
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		
-		//#1. ·çÆ® ÄÁÅ×ÀÌ³Ê ¹× ÀÚ½Ä ³ëµå ±¸¼º
+		//#1. ë£¨íŠ¸ ì»¨í…Œì´ë„ˆ ë° ìì‹ ë…¸ë“œ êµ¬ì„±
 		StackPane root = new StackPane();
 		root.setPrefSize(200, 100);
-		root.setAlignment(Pos.CENTER); //Ç×¸ñº° Alignment ¼³Á¤À» ¾ÈÇßÀ»¶§ Àû¿ë(default : CENTER)
+		root.setAlignment(Pos.CENTER); //í•­ëª©ë³„ Alignment ì„¤ì •ì„ ì•ˆí–ˆì„ë•Œ ì ìš©(default : CENTER)
 		
 		Button btn1 = new Button("Stack 1");
 		Button btn2 = new Button("Stack 2");
 		Button btn3 = new Button("Stack 3");
 		
-		StackPane.setAlignment(btn1, Pos.CENTER); //Ç×¸ñº° Alignment ¼³Á¤
-		StackPane.setAlignment(btn2, Pos.CENTER); //Ç×¸ñº° Alignment ¼³Á¤
-		StackPane.setAlignment(btn3, Pos.CENTER); //Ç×¸ñº° Alignment ¼³Á¤
+		StackPane.setAlignment(btn1, Pos.CENTER); //í•­ëª©ë³„ Alignment ì„¤ì •
+		StackPane.setAlignment(btn2, Pos.CENTER); //í•­ëª©ë³„ Alignment ì„¤ì •
+		StackPane.setAlignment(btn3, Pos.CENTER); //í•­ëª©ë³„ Alignment ì„¤ì •
 		
 		StackPane.setMargin(btn1, new Insets(0,80,30,0));
 		StackPane.setMargin(btn3, new Insets(30,0,0,80));
@@ -35,10 +35,10 @@ public class MyStage extends Application{
 		children.add(btn2);
 		children.add(btn3);
 		
-		//#2. Scene ¼³Á¤
+		//#2. Scene ì„¤ì •
 		Scene scene = new Scene(root);
 		
-		//#3. Stage ¼³Á¤
+		//#3. Stage ì„¤ì •
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		

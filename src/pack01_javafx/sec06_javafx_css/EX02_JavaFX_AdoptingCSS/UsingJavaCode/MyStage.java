@@ -1,4 +1,4 @@
-package pack01_javafx.sec06_javafx_css.EX02_JavaFX_AdoptingCSS.UsingJavaCode;
+ï»¿package pack01_javafx.sec06_javafx_css.EX02_JavaFX_AdoptingCSS.UsingJavaCode;
 
 import javafx.application.Application;
 import javafx.collections.ObservableList;
@@ -22,7 +22,7 @@ public class MyStage extends Application{
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		
-		//#1. ·çÆ® ÄÁÅ×ÀÌ³Ê ¹× ÀÚ½Ä ³ëµå ±¸¼º
+		//#1. ë£¨íŠ¸ ì»¨í…Œì´ë„ˆ ë° ìì‹ ë…¸ë“œ êµ¬ì„±
 
 		VBox root = new VBox();
 		root.setPrefWidth(300);
@@ -69,7 +69,7 @@ public class MyStage extends Application{
 		children.add(new Separator(Orientation.HORIZONTAL));
 		children.add(hbox4);
 		
-		//@CSS Àû¿ëÀ» À§ÇÑ id/styleClass Á¤ÀÇ =========================================
+		//@CSS ì ìš©ì„ ìœ„í•œ id/styleClass ì •ì˜ =========================================
 		textField1.getStyleClass().add("forward");
 		textField2.getStyleClass().add("forward");
 		textField3.getStyleClass().add("backward");
@@ -82,10 +82,10 @@ public class MyStage extends Application{
 		slider.setId("slider");
 		root.getStylesheets().add(getClass().getResource("myStyle.css").toString());
 		
-		//#2. Scene ¼³Á¤
+		//#2. Scene ì„¤ì •
 		Scene scene = new Scene(root);
 
-		//#3. Stage ¼³Á¤
+		//#3. Stage ì„¤ì •
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		

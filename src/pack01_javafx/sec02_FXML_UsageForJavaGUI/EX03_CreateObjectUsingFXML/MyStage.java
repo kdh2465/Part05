@@ -1,4 +1,4 @@
-package pack01_javafx.sec02_FXML_UsageForJavaGUI.EX03_CreateObjectUsingFXML;
+Ôªøpackage pack01_javafx.sec02_FXML_UsageForJavaGUI.EX03_CreateObjectUsingFXML;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -8,7 +8,7 @@ public class MyStage extends Application{
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		
-		//#. FXML ∆ƒ¿œ ∑Œµ˘
+		//#. FXML ÌååÏùº Î°úÎî©
 		MyFXML myFXML1=FXMLLoader.load(getClass().getResource("root1.fxml"));
 		MyFXML myFXML2=FXMLLoader.load(getClass().getResource("root2.fxml"));
 		MyFXML myFXML3=FXMLLoader.load(getClass().getResource("root3.fxml"));

@@ -1,4 +1,4 @@
-package pack02_javanetworkUsingjavafx.sec02_UDPChattingWithJavaFX.EX01_UDPChattingWithJavaFX_ServerSide;
+ï»¿package pack02_javanetworkUsingjavafx.sec02_UDPChattingWithJavaFX.EX01_UDPChattingWithJavaFX_ServerSide;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -13,10 +13,10 @@ public class MyStage extends Application{
 		//#1. BorderPane_Using FXML
 		BorderPane root = FXMLLoader.load(getClass().getResource("root.fxml"));
 			
-		//#2. Scene ¼³Á¤
+		//#2. Scene ì„¤ì •
 		Scene scene = new Scene(root);
 		
-		//#3. Stage ¼³Á¤
+		//#3. Stage ì„¤ì •
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		

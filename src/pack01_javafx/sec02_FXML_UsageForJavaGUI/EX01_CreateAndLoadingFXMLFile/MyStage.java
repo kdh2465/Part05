@@ -1,4 +1,4 @@
-package pack01_javafx.sec02_FXML_UsageForJavaGUI.EX01_CreateAndLoadingFXMLFile;
+ï»¿package pack01_javafx.sec02_FXML_UsageForJavaGUI.EX01_CreateAndLoadingFXMLFile;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -12,24 +12,24 @@ public class MyStage extends Application{
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		
-		//FXML ÆÄÀÏ ·Îµù ¹æ¹ı #1.
+		//FXML íŒŒì¼ ë¡œë”© ë°©ë²• #1.
 		VBox root1 = FXMLLoader.load(getClass().getResource("root.fxml"));		
-		//FXML ÆÄÀÏ ·Îµù ¹æ¹ı #2.
+		//FXML íŒŒì¼ ë¡œë”© ë°©ë²• #2.
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("root.fxml"));
 		VBox root2 = loader.load();
 		
-		//ÀÚ¹ÙÄÚµå¿¡¼­ Á÷Àû UI ±¸¼º
+		//ìë°”ì½”ë“œì—ì„œ ì§ì  UI êµ¬ì„±
 		VBox root = new VBox();
 		root.setPrefWidth(150);
 		root.setPrefHeight(50);
 		root.setSpacing(10);
-		root.getChildren().add(new Label("FXML ·Îµù"));
-		root.getChildren().add(new Button("Å¬¸¯"));
+		root.getChildren().add(new Label("FXML ë¡œë”©"));
+		root.getChildren().add(new Button("í´ë¦­"));
 		
-		//Scene ¼³Á¤
+		//Scene ì„¤ì •
 		Scene scene = new Scene(root1);
 		
-		//Stage ¼³Á¤
+		//Stage ì„¤ì •
 		primaryStage.setScene(scene);
 		primaryStage.show();
 	}

@@ -1,4 +1,4 @@
-package pack01_javafx.sec04_JavaFX_Control.EX02_LabeledControl.UsingFXML;
+﻿package pack01_javafx.sec04_JavaFX_Control.EX02_LabeledControl.UsingFXML;
 
 import javafx.scene.control.TextInputControl;
 

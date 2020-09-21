@@ -1,4 +1,4 @@
-package pack01_javafx.sec05_JavaFX_EventHandling.EX03_PropertyChangeListening.UsingJavaCode;
+ï»¿package pack01_javafx.sec05_JavaFX_EventHandling.EX03_PropertyChangeListening.UsingJavaCode;
 
 import javafx.application.Application;
 import javafx.beans.value.ChangeListener;
@@ -24,21 +24,21 @@ public class MyStage extends Application{
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		
-		//#1. ·çÆ® ÄÁÅ×ÀÌ³Ê ¹× ÀÚ½Ä ³ëµå ±¸¼º
+		//#1. ë£¨íŠ¸ ì»¨í…Œì´ë„ˆ ë° ìì‹ ë…¸ë“œ êµ¬ì„±
 		HBox root = new HBox();
 		root.setPrefWidth(450);
 		root.setPrefHeight(150);
 		root.setSpacing(10);
 		root.setPadding(new Insets(10));
 		
-		Label label1 = new Label("±ÛÀÚ¼ö : 0");
+		Label label1 = new Label("ê¸€ììˆ˜ : 0");
 		TextField textField = new TextField();
 		//@textField property
 		textField.textProperty().addListener(new ChangeListener<String>() {
 			@Override
 			public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
 				System.out.println("OldValue = "+oldValue +"  newValue = "+newValue);
-				label1.setText("±ÛÀÚ¼ö : "+newValue.length());
+				label1.setText("ê¸€ììˆ˜ : "+newValue.length());
 			}
 		});	
 		
@@ -47,8 +47,8 @@ public class MyStage extends Application{
 		vbox1.setPrefWidth(150);
 		vbox1.setSpacing(10);
 
-		Label label2 = new Label("Ã¼Å© ÇØÁ¦");
-		CheckBox checkBox = new CheckBox("Ã¼Å©¹Ú½º");
+		Label label2 = new Label("ì²´í¬ í•´ì œ");
+		CheckBox checkBox = new CheckBox("ì²´í¬ë°•ìŠ¤");
 		//@checkBox property
 		checkBox.selectedProperty().addListener(new ChangeListener<Boolean>() {
 			@Override
@@ -56,9 +56,9 @@ public class MyStage extends Application{
 				
 				// TODO Auto-generated method stub
 				if(newValue) {
-					label2.setText("Ã¼Å© ¼±ÅÃ");
+					label2.setText("ì²´í¬ ì„ íƒ");
 				} else {
-					label2.setText("Ã¼Å© ÇØÁ¦");
+					label2.setText("ì²´í¬ í•´ì œ");
 				}
 			}
 		});
@@ -74,7 +74,7 @@ public class MyStage extends Application{
 		comboBox.valueProperty().addListener(new ChangeListener<String>() {
 			@Override
 			public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-				label3.setText(newValue+" ¼±ÅÃ");				
+				label3.setText(newValue+" ì„ íƒ");				
 			}			
 		});
 		comboBox.setValue("item1");
@@ -90,10 +90,10 @@ public class MyStage extends Application{
 		children.add(new Separator(Orientation.VERTICAL));
 		children.add(vbox3);		
 		 
-		//#2. Scene ¼³Á¤
+		//#2. Scene ì„¤ì •
 		Scene scene = new Scene(root);
 
-		//#3. Stage ¼³Á¤
+		//#3. Stage ì„¤ì •
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		

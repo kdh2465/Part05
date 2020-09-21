@@ -1,4 +1,4 @@
-package pack01_javafx.sec03_JavaFX_Layout.EX02_VBox_Layout.UsingJavaCode;
+ï»¿package pack01_javafx.sec03_JavaFX_Layout.EX02_VBox_Layout.UsingJavaCode;
 
 import javafx.application.Application;
 import javafx.collections.ObservableList;
@@ -35,10 +35,10 @@ public class MyStage extends Application{
 		children.add(btn1);
 		children.add(btn2);
 		
-		//#2. Scene ¼³Á¤
+		//#2. Scene ì„¤ì •
 		Scene scene = new Scene(root);
 		
-		//#3. Stage ¼³Á¤
+		//#3. Stage ì„¤ì •
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		

@@ -1,4 +1,4 @@
-package pack02_javanetworkUsingjavafx.sec02_UDPChattingWithJavaFX.EX01_UDPChattingWithJavaFX_ServerSide;
+ï»¿package pack02_javanetworkUsingjavafx.sec02_UDPChattingWithJavaFX.EX01_UDPChattingWithJavaFX_ServerSide;
 
 import java.io.BufferedInputStream;
 import java.io.File;
@@ -29,13 +29,13 @@ public class User {
 
 		try {
 			datagramSocket.send(sendPacket);
-		} catch (IOException e) {System.out.println("µ¥ÀÌÅÍ Àü¼Û½ÇÆĞ");}		
+		} catch (IOException e) {System.out.println("ë°ì´í„° ì „ì†¡ì‹¤íŒ¨");}		
 				
 		sendData = data.getBytes();
 		sendPacket = new DatagramPacket(sendData, sendData.length, socketAddress);
 		try {
 			datagramSocket.send(sendPacket);
-		} catch (IOException e) {System.out.println("µ¥ÀÌÅÍ Àü¼Û½ÇÆĞ");}		
+		} catch (IOException e) {System.out.println("ë°ì´í„° ì „ì†¡ì‹¤íŒ¨");}		
 		
 	}
 	
@@ -48,19 +48,19 @@ public class User {
 		sendPacket = new DatagramPacket(sendData, sendData.length, socketAddress);
 		try {
 			datagramSocket.send(sendPacket);
-		} catch (IOException e) {System.out.println("µ¥ÀÌÅÍ Àü¼Û½ÇÆĞ");}		
+		} catch (IOException e) {System.out.println("ë°ì´í„° ì „ì†¡ì‹¤íŒ¨");}		
 				
 		sendData = data.getBytes();
 		sendPacket = new DatagramPacket(sendData, sendData.length, socketAddress);
 		try {
 			datagramSocket.send(sendPacket);
-		} catch (IOException e) {System.out.println("µ¥ÀÌÅÍ Àü¼Û½ÇÆĞ");}	
+		} catch (IOException e) {System.out.println("ë°ì´í„° ì „ì†¡ì‹¤íŒ¨");}	
 		
 		sendData = fromUser.getBytes();
 		sendPacket = new DatagramPacket(sendData, sendData.length, socketAddress);
 		try {
 			datagramSocket.send(sendPacket);
-		} catch (IOException e) {System.out.println("µ¥ÀÌÅÍ Àü¼Û½ÇÆĞ");}	
+		} catch (IOException e) {System.out.println("ë°ì´í„° ì „ì†¡ì‹¤íŒ¨");}	
 		
 	}
 	
@@ -73,25 +73,25 @@ public class User {
 		sendPacket = new DatagramPacket(sendData, sendData.length, socketAddress);
 		try {
 			datagramSocket.send(sendPacket);
-		} catch (IOException e) {System.out.println("µ¥ÀÌÅÍ Àü¼Û½ÇÆĞ");}		
+		} catch (IOException e) {System.out.println("ë°ì´í„° ì „ì†¡ì‹¤íŒ¨");}		
 				
 		sendData = data.getBytes();
 		sendPacket = new DatagramPacket(sendData, sendData.length, socketAddress);
 		try {
 			datagramSocket.send(sendPacket);
-		} catch (IOException e) {System.out.println("µ¥ÀÌÅÍ Àü¼Û½ÇÆĞ");}	
+		} catch (IOException e) {System.out.println("ë°ì´í„° ì „ì†¡ì‹¤íŒ¨");}	
 		
 		sendData = fromUser.getBytes();
 		sendPacket = new DatagramPacket(sendData, sendData.length, socketAddress);
 		try {
 			datagramSocket.send(sendPacket);
-		} catch (IOException e) {System.out.println("µ¥ÀÌÅÍ Àü¼Û½ÇÆĞ");}	
+		} catch (IOException e) {System.out.println("ë°ì´í„° ì „ì†¡ì‹¤íŒ¨");}	
 		
 		sendData = toUser.getBytes();
 		sendPacket = new DatagramPacket(sendData, sendData.length, socketAddress);
 		try {
 			datagramSocket.send(sendPacket);
-		} catch (IOException e) {System.out.println("µ¥ÀÌÅÍ Àü¼Û½ÇÆĞ");}	
+		} catch (IOException e) {System.out.println("ë°ì´í„° ì „ì†¡ì‹¤íŒ¨");}	
 		
 	}
 	
@@ -105,7 +105,7 @@ public class User {
 		
 		try {
 			datagramSocket.send(sendPacket);
-		} catch (IOException e) {System.out.println("µ¥ÀÌÅÍ Àü¼Û½ÇÆĞ");}	
+		} catch (IOException e) {System.out.println("ë°ì´í„° ì „ì†¡ì‹¤íŒ¨");}	
 		
 	}
 	
@@ -119,12 +119,12 @@ public class User {
 		
 		try {
 			datagramSocket.send(sendPacket);
-		} catch (IOException e) {System.out.println("µ¥ÀÌÅÍ Àü¼Û½ÇÆĞ");}	
+		} catch (IOException e) {System.out.println("ë°ì´í„° ì „ì†¡ì‹¤íŒ¨");}	
 		
 		sendPacket = new DatagramPacket(data, length, socketAddress);
 		try {
 			datagramSocket.send(sendPacket);
-		} catch (IOException e) {System.out.println("µ¥ÀÌÅÍ Àü¼Û½ÇÆĞ");}	
+		} catch (IOException e) {System.out.println("ë°ì´í„° ì „ì†¡ì‹¤íŒ¨");}	
 		
 	}
 	
@@ -146,7 +146,7 @@ public class User {
 				sendPacket = new DatagramPacket(sendData, sendData.length, socketAddress);
 				try {
 					datagramSocket.send(sendPacket);
-				} catch (IOException e) {System.out.println("µ¥ÀÌÅÍ Àü¼Û½ÇÆĞ");}
+				} catch (IOException e) {System.out.println("ë°ì´í„° ì „ì†¡ì‹¤íŒ¨");}
 				break;
 			}	
 			String str_length = String.valueOf(count);
@@ -154,12 +154,12 @@ public class User {
 			sendPacket = new DatagramPacket(sendData, sendData.length, socketAddress);
 			try {
 				datagramSocket.send(sendPacket);
-			} catch (IOException e) {System.out.println("µ¥ÀÌÅÍ Àü¼Û½ÇÆĞ");}
+			} catch (IOException e) {System.out.println("ë°ì´í„° ì „ì†¡ì‹¤íŒ¨");}
 			
 			sendPacket = new DatagramPacket(readbuf, count, socketAddress);
 			try {
 				datagramSocket.send(sendPacket);
-			} catch (IOException e) {System.out.println("µ¥ÀÌÅÍ Àü¼Û½ÇÆĞ");}
+			} catch (IOException e) {System.out.println("ë°ì´í„° ì „ì†¡ì‹¤íŒ¨");}
 						
 		}
 	}

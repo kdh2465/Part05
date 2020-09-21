@@ -1,4 +1,4 @@
-package pack02_javanetworkUsingjavafx.sec03_MulticastChattingWithJavaFX.EX01_MulticastChattingWithJavaFX_Clients;
+ï»¿package pack02_javanetworkUsingjavafx.sec03_MulticastChattingWithJavaFX.EX01_MulticastChattingWithJavaFX_Clients;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -18,10 +18,10 @@ public class MyStage extends Application{
 		
 		//BorderPane root = FXMLLoader.load(getClass().getResource("root.fxml"));
 			
-		//#2. Scene ¼³Á¤
+		//#2. Scene ì„¤ì •
 		Scene scene = new Scene(root);
 		
-		//#3. Stage ¼³Á¤
+		//#3. Stage ì„¤ì •
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		

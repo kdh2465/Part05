@@ -1,4 +1,4 @@
-package pack01_javafx.sec05_JavaFX_EventHandling.EX03_PropertyChangeListening.UsingFXML;
+ï»¿package pack01_javafx.sec05_JavaFX_EventHandling.EX03_PropertyChangeListening.UsingFXML;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -11,15 +11,15 @@ public class MyStage extends Application{
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		
-		//#1. fxml ·Îµù
+		//#1. fxml ë¡œë”©
 		//HBox root = FXMLLoader.load(getClass().getResource("root.fxml"));
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("root.fxml"));
 		HBox root = loader.load();
 		
-		//#2. Scene ¼³Á¤
+		//#2. Scene ì„¤ì •
 		Scene scene = new Scene(root);
 		
-		//#3. Stage ¼³Á¤
+		//#3. Stage ì„¤ì •
 		primaryStage.setScene(scene);
 		primaryStage.show();		
 	}

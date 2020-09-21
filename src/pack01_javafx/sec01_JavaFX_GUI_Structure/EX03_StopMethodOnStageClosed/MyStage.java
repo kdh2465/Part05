@@ -1,4 +1,4 @@
-package pack01_javafx.sec01_JavaFX_GUI_Structure.EX03_StopMethodOnStageClosed;
+ï»¿package pack01_javafx.sec01_JavaFX_GUI_Structure.EX03_StopMethodOnStageClosed;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
@@ -11,8 +11,8 @@ public class MyStage extends Application {
 	
 	@Override
 	public void stop() throws Exception {
-		System.out.println("¸®¼Ò½º ÀÚ¿øÀ» ÇØÁ¦ÇÕ´Ï´Ù.");
-		System.out.println("ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù.");		
+		System.out.println("ë¦¬ì†ŒìŠ¤ ìì›ì„ í•´ì œí•©ë‹ˆë‹¤.");
+		System.out.println("í”„ë¡œê·¸ë¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤.");		
 	}
 	
 }

@@ -1,4 +1,4 @@
-package pack01_javafx.sec04_JavaFX_Control.EX06_ListViewTreeView.UsingJavaCode;
+ï»¿package pack01_javafx.sec04_JavaFX_Control.EX06_ListViewTreeView.UsingJavaCode;
 
 import javafx.application.Application;
 import javafx.collections.FXCollections;
@@ -31,7 +31,7 @@ public class MyStage extends Application{
 		ListView<String> listView = new ListView<>();
 		//listView.setOrientation(Orientation.HORIZONTAL);
 		
-		/*ÄÚµå¿¡¼­¸¸ °¡´ÉÇÑ ¹æ¹ı getchildren°ú´Â ´Ù¸£°Ô setItems ¸Ş¼­µå°¡ ÀÖ¾î¼­ fxml¿¡¼­ <items>´Â setItems¸¦ ÀÇ¹ÌÇÔ
+		/*ì½”ë“œì—ì„œë§Œ ê°€ëŠ¥í•œ ë°©ë²• getchildrenê³¼ëŠ” ë‹¤ë¥´ê²Œ setItems ë©”ì„œë“œê°€ ìˆì–´ì„œ fxmlì—ì„œ <items>ëŠ” setItemsë¥¼ ì˜ë¯¸í•¨
 		list.getItems().addAll("ListItem1", "ListItem2", "ListItem3");
 		*/
 		ObservableList<String> obervableList = FXCollections.observableArrayList();
@@ -66,10 +66,10 @@ public class MyStage extends Application{
 		children.add(treeView);
 				
 		
-		//#2. Scene ¼³Á¤
+		//#2. Scene ì„¤ì •
 		Scene scene = new Scene(root);
 		
-		//#3. Stage ¼³Á¤
+		//#3. Stage ì„¤ì •
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		

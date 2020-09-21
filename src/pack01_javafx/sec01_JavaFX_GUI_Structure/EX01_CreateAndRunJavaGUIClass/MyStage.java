@@ -1,4 +1,4 @@
-package pack01_javafx.sec01_JavaFX_GUI_Structure.EX01_CreateAndRunJavaGUIClass;
+ï»¿package pack01_javafx.sec01_JavaFX_GUI_Structure.EX01_CreateAndRunJavaGUIClass;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
@@ -6,7 +6,7 @@ public class MyStage extends Application {
 	
 	public MyStage() {
 		System.out.println("MyStage() : "+Thread.currentThread().getName());
-		//MyStage() : JavaFX Application Thread-->UI »ı¼º º¯°æÀº ÀÌ Thread¿¡¼­¸¸ »ç¿ë 
+		//MyStage() : JavaFX Application Thread-->UI ìƒì„± ë³€ê²½ì€ ì´ Threadì—ì„œë§Œ ì‚¬ìš© 
 	}
 	@Override
 	public void init() throws Exception {

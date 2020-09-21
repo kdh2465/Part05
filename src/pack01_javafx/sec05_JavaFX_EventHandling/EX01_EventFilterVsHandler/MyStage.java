@@ -1,4 +1,4 @@
-package pack01_javafx.sec05_JavaFX_EventHandling.EX01_EventFilterVsHandler;
+ï»¿package pack01_javafx.sec05_JavaFX_EventHandling.EX01_EventFilterVsHandler;
 
 import javafx.application.Application;
 import javafx.collections.ObservableList;
@@ -16,7 +16,7 @@ public class MyStage extends Application{
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		
-		//#1. ·çÆ® ÄÁÅ×ÀÌ³Ê ¹× ÀÚ½Ä ³ëµå ±¸¼º
+		//#1. ë£¨íŠ¸ ì»¨í…Œì´ë„ˆ ë° ìì‹ ë…¸ë“œ êµ¬ì„±
 		HBox root = new HBox();
 		root.setPrefWidth(250);
 		root.setPrefHeight(150);
@@ -29,10 +29,10 @@ public class MyStage extends Application{
 		ObservableList<Node> children = root.getChildren();
 		children.add(imageView);
 		 
-		//#2. Scene ¼³Á¤
+		//#2. Scene ì„¤ì •
 		Scene scene = new Scene(root);
 
-		//#3. Stage ¼³Á¤
+		//#3. Stage ì„¤ì •
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		

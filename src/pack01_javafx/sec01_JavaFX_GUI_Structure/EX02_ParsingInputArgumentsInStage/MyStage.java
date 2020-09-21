@@ -1,4 +1,4 @@
-package pack01_javafx.sec01_JavaFX_GUI_Structure.EX02_ParsingInputArgumentsInStage;
+ï»¿package pack01_javafx.sec01_JavaFX_GUI_Structure.EX02_ParsingInputArgumentsInStage;
 import java.util.List;
 import java.util.Map;
 
@@ -9,27 +9,27 @@ public class MyStage extends Application {
 	
 	@Override
 	public void init() throws Exception {
-		Parameters params = getParameters(); //Input Arguments °¡Á®¿À±â
+		Parameters params = getParameters(); //Input Arguments ê°€ì ¸ì˜¤ê¸°
 		
-		//#1. key-value ½ÖÀ» ÇÏ³ªÀÇ StringÀ¸·Î °¡Á®¿À±â
+		//#1. key-value ìŒì„ í•˜ë‚˜ì˜ Stringìœ¼ë¡œ ê°€ì ¸ì˜¤ê¸°
 		List<String> args1 = params.getRaw();
-		if(args1.size()==0) { System.out.println("arguments ¾øÀ½"); System.exit(0); }
+		if(args1.size()==0) { System.out.println("arguments ì—†ìŒ"); System.exit(0); }
 		System.out.println(args1);
 		
-		//#2. key-value ½ÖÀ¸·Î ±¸¼ºµÈ µ¥ÀÌÅÍ¸¦ Map Entity·Î °¡Á®¿À±â
+		//#2. key-value ìŒìœ¼ë¡œ êµ¬ì„±ëœ ë°ì´í„°ë¥¼ Map Entityë¡œ ê°€ì ¸ì˜¤ê¸°
 		Map<String, String> args2 = params.getNamed();
-		if(args2.size()==0) { System.out.println("arguments ¾øÀ½"); System.exit(0); }
+		if(args2.size()==0) { System.out.println("arguments ì—†ìŒ"); System.exit(0); }
 		System.out.println(args2);
 		
-		//#3. key-value ½ÖÀ¸·Î ±¸¼ºµÇÁö ¾ÊÀº µ¥ÀÌÅÍ¸¦ list·Î °¡Á®¿À±â
+		//#3. key-value ìŒìœ¼ë¡œ êµ¬ì„±ë˜ì§€ ì•Šì€ ë°ì´í„°ë¥¼ listë¡œ ê°€ì ¸ì˜¤ê¸°
 		List<String> args3 = params.getUnnamed();
-		if(args3.size()==0) { System.out.println("arguments ¾øÀ½"); System.exit(0); }
+		if(args3.size()==0) { System.out.println("arguments ì—†ìŒ"); System.exit(0); }
 		System.out.println(args3);
 				
 	}
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		//UI Ã³¸®ºÎºĞ
+		//UI ì²˜ë¦¬ë¶€ë¶„
 	}
 	
 }

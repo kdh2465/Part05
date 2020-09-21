@@ -1,4 +1,4 @@
-package pack01_javafx.sec04_JavaFX_Control.EX03_CommonMethodOfTextInputControl.UsingJavaCode;
+ï»¿package pack01_javafx.sec04_JavaFX_Control.EX03_CommonMethodOfTextInputControl.UsingJavaCode;
 
 import javafx.application.Application;
 import javafx.collections.ObservableList;
@@ -14,7 +14,7 @@ public class MyStage extends Application{
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		
-		//#1. ·çÆ® ÄÁÅ×ÀÌ³Ê ¹× ÀÚ½Ä ³ëµå ±¸¼º
+		//#1. ë£¨íŠ¸ ì»¨í…Œì´ë„ˆ ë° ìì‹ ë…¸ë“œ êµ¬ì„±
 		VBox root = new VBox();
 		root.setPrefWidth(300);
 		root.setPrefHeight(100);
@@ -23,26 +23,26 @@ public class MyStage extends Application{
 		
 		TextField textField1 = new TextField();
 		textField1.setFont(new Font(15));
-		textField1.setText("Ã¹¹øÂ° TextField");
+		textField1.setText("ì²«ë²ˆì§¸ TextField");
 	
-		textField1.selectAll(); //Java Code¿¡¼­¸¸ »ç¿ë °¡´É (ÀÌÈÄ Controller¿¡¼­ ±â´ÉºÎ¿©)
-		textField1.copy(); //Java Code¿¡¼­¸¸ »ç¿ë °¡´É (ÀÌÈÄ Controller¿¡¼­ ±â´ÉºÎ¿©)
+		textField1.selectAll(); //Java Codeì—ì„œë§Œ ì‚¬ìš© ê°€ëŠ¥ (ì´í›„ Controllerì—ì„œ ê¸°ëŠ¥ë¶€ì—¬)
+		textField1.copy(); //Java Codeì—ì„œë§Œ ì‚¬ìš© ê°€ëŠ¥ (ì´í›„ Controllerì—ì„œ ê¸°ëŠ¥ë¶€ì—¬)
 						
 		TextField textField2 = new TextField();
-		textField2.paste(); //Java Code¿¡¼­¸¸ »ç¿ë °¡´É (ÀÌÈÄ Controller¿¡¼­ ±â´ÉºÎ¿©)
-		textField2.appendText(" (º¹»çº»)");
+		textField2.paste(); //Java Codeì—ì„œë§Œ ì‚¬ìš© ê°€ëŠ¥ (ì´í›„ Controllerì—ì„œ ê¸°ëŠ¥ë¶€ì—¬)
+		textField2.appendText(" (ë³µì‚¬ë³¸)");
 		textField2.setEditable(false);
 				
 		TextField textField3 = new TextField(); 
-		textField3.setPromptText("¼¼¹øÂ° TextField"); 
+		textField3.setPromptText("ì„¸ë²ˆì§¸ TextField"); 
 		
 		ObservableList<Node> children = root.getChildren();
 		children.addAll(textField1, textField2, textField3);
 		
-		//#2. Scene ¼³Á¤
+		//#2. Scene ì„¤ì •
 		Scene scene = new Scene(root);
 		
-		//#3. Stage ¼³Á¤
+		//#3. Stage ì„¤ì •
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		

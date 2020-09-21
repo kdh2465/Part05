@@ -1,4 +1,4 @@
-package pack01_javafx.sec04_JavaFX_Control.EX02_LabeledControl.UsingJavaCode;
+ï»¿package pack01_javafx.sec04_JavaFX_Control.EX02_LabeledControl.UsingJavaCode;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
@@ -21,7 +21,7 @@ public class MyStage extends Application{
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		
-		//#1. ·çÆ® ÄÁÅ×ÀÌ³Ê ¹× ÀÚ½Ä ³ëµå ±¸¼º
+		//#1. ë£¨íŠ¸ ì»¨í…Œì´ë„ˆ ë° ìì‹ ë…¸ë“œ êµ¬ì„±
 		BorderPane root = new BorderPane();
 		root.setPrefSize(250, 150);
 		root.setPadding(new Insets(10));
@@ -36,9 +36,9 @@ public class MyStage extends Application{
 		CheckBox checkBox1 = new CheckBox("check #1");
 		CheckBox checkBox2 = new CheckBox("check #2");
 		CheckBox checkBox3 = new CheckBox("check #3");
-		checkBox1.setUserData("Ã¹¹øÂ° CheckBox");
-		checkBox2.setUserData("µÎ¹øÂ° CheckBox");
-		checkBox3.setUserData("¼¼¹øÂ° CheckBox");
+		checkBox1.setUserData("ì²«ë²ˆì§¸ CheckBox");
+		checkBox2.setUserData("ë‘ë²ˆì§¸ CheckBox");
+		checkBox3.setUserData("ì„¸ë²ˆì§¸ CheckBox");
 		checkBox1.setSelected(true);
 		VBox vbox1 = new VBox(checkBox1, checkBox2, checkBox3);
 		vbox1.setAlignment(Pos.CENTER);
@@ -48,9 +48,9 @@ public class MyStage extends Application{
 		RadioButton radioBtn1 = new RadioButton("radio #1");
 		RadioButton radioBtn2 = new RadioButton("radio #2");
 		RadioButton radioBtn3 = new RadioButton("radio #3");		
-		radioBtn1.setUserData("Ã¹¹øÂ° RadioButton");
-		radioBtn2.setUserData("µÎ¹øÂ° RadioButton");
-		radioBtn3.setUserData("Ã¹¹øÂ° RadioButton");
+		radioBtn1.setUserData("ì²«ë²ˆì§¸ RadioButton");
+		radioBtn2.setUserData("ë‘ë²ˆì§¸ RadioButton");
+		radioBtn3.setUserData("ì²«ë²ˆì§¸ RadioButton");
 		radioBtn1.setSelected(true);
 		
 		ToggleGroup tg = new ToggleGroup();
@@ -71,17 +71,17 @@ public class MyStage extends Application{
 		root.setCenter(hbox_center);
 		
 		//#1-3. Bottom: Button
-		Button btn1 = new Button("Ãë¼Ò");
-		Button btn2 = new Button("È®ÀÎ");
+		Button btn1 = new Button("ì·¨ì†Œ");
+		Button btn2 = new Button("í™•ì¸");
 		HBox hBox_bottom = new HBox(btn1, btn2);
 		hBox_bottom.setSpacing(50);
 		hBox_bottom.setAlignment(Pos.CENTER);
 		root.setBottom(hBox_bottom);
 											
-		//#2. Scene ¼³Á¤
+		//#2. Scene ì„¤ì •
 		Scene scene = new Scene(root);
 		
-		//#3. Stage ¼³Á¤
+		//#3. Stage ì„¤ì •
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		

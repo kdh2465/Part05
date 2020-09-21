@@ -1,4 +1,4 @@
-package pack01_javafx.sec04_JavaFX_Control.EX10_MenuBarContextMenu.UsingJavaCode;
+ï»¿package pack01_javafx.sec04_JavaFX_Control.EX10_MenuBarContextMenu.UsingJavaCode;
 
 import javafx.application.Application;
 import javafx.collections.ObservableList;
@@ -24,7 +24,7 @@ public class MyStage extends Application{
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		
-		//#1. ·çÆ® ÄÁÅ×ÀÌ³Ê ¹× ÀÚ½Ä ³ëµå ±¸¼º
+		//#1. ë£¨íŠ¸ ì»¨í…Œì´ë„ˆ ë° ìì‹ ë…¸ë“œ êµ¬ì„±
 		VBox root = new VBox();
 		root.setPrefWidth(400);
 		root.setPrefHeight(150);
@@ -83,7 +83,7 @@ public class MyStage extends Application{
         
         TextArea textArea = new TextArea();
         textArea.setContextMenu(contextMenu);
-        textArea.setText("ÄÁÅØ½ºÆ®¸Ş´º°¡ Æ÷ÇÔµÈ TextArea");
+        textArea.setText("ì»¨í…ìŠ¤íŠ¸ë©”ë‰´ê°€ í¬í•¨ëœ TextArea");
     
         VBox.setVgrow(textArea, Priority.ALWAYS);				        
 		
@@ -91,10 +91,10 @@ public class MyStage extends Application{
 		children.add(menuBar);
 		children.add(textArea);
 		
-		//#2. Scene ¼³Á¤
+		//#2. Scene ì„¤ì •
 		Scene scene = new Scene(root);
 		
-		//#3. Stage ¼³Á¤
+		//#3. Stage ì„¤ì •
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		

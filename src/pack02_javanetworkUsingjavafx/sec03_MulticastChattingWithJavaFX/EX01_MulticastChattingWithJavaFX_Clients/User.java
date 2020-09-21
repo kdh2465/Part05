@@ -1,4 +1,4 @@
-package pack02_javanetworkUsingjavafx.sec03_MulticastChattingWithJavaFX.EX01_MulticastChattingWithJavaFX_Clients;
+ï»¿package pack02_javanetworkUsingjavafx.sec03_MulticastChattingWithJavaFX.EX01_MulticastChattingWithJavaFX_Clients;
 
 import java.io.BufferedInputStream;
 import java.io.File;
@@ -33,7 +33,7 @@ public class User {
 
 		try {
 			multicastSocket.send(sendPacket);
-		} catch (IOException e) {System.out.println("µ¥ÀÌÅÍ Àü¼Û½ÇÆĞ");}		
+		} catch (IOException e) {System.out.println("ë°ì´í„° ì „ì†¡ì‹¤íŒ¨");}		
 	}
 	
 	void sendData(int code, String data, String fromUser) {
@@ -46,7 +46,7 @@ public class User {
 
 		try {
 			multicastSocket.send(sendPacket);
-		} catch (IOException e) {System.out.println("µ¥ÀÌÅÍ Àü¼Û½ÇÆĞ");}		
+		} catch (IOException e) {System.out.println("ë°ì´í„° ì „ì†¡ì‹¤íŒ¨");}		
 	}
 	
 	void sendData(int code, String data, String fromUser, String toUser) {
@@ -59,7 +59,7 @@ public class User {
 
 		try {
 			multicastSocket.send(sendPacket);
-		} catch (IOException e) {System.out.println("µ¥ÀÌÅÍ Àü¼Û½ÇÆĞ");}		
+		} catch (IOException e) {System.out.println("ë°ì´í„° ì „ì†¡ì‹¤íŒ¨");}		
 		
 	}
 	
@@ -73,7 +73,7 @@ public class User {
 
 		try {
 			multicastSocket.send(sendPacket);
-		} catch (IOException e) {System.out.println("µ¥ÀÌÅÍ Àü¼Û½ÇÆĞ");}
+		} catch (IOException e) {System.out.println("ë°ì´í„° ì „ì†¡ì‹¤íŒ¨");}
 	}
 	byte[] concatArray(byte[] a, byte[] b) {
 		byte[] result = new byte[a.length+b.length];
@@ -84,7 +84,7 @@ public class User {
 		return result;
 	}
 
-	void sendData(int code, int length2, byte[] data2) { //ÇÑ±ÛÀÌ Æ÷ÇÔµÈ °æ¿ì String->byte->String½Ã ºñÆ®¼ö º¯Çü¹ß»ıÀ¸·Î °¢°¢ byte·Î º¯°æ ¼öÇà
+	void sendData(int code, int length2, byte[] data2) { //í•œê¸€ì´ í¬í•¨ëœ ê²½ìš° String->byte->Stringì‹œ ë¹„íŠ¸ìˆ˜ ë³€í˜•ë°œìƒìœ¼ë¡œ ê°ê° byteë¡œ ë³€ê²½ ìˆ˜í–‰
 		DatagramPacket sendPacket;
 		
 		byte[] a = concatArray(name.getBytes(), sperator.getBytes());
@@ -102,7 +102,7 @@ public class User {
 		
 		try {
 			multicastSocket.send(sendPacket);
-		} catch (IOException e) {System.out.println("µ¥ÀÌÅÍ Àü¼Û½ÇÆĞ");}
+		} catch (IOException e) {System.out.println("ë°ì´í„° ì „ì†¡ì‹¤íŒ¨");}
 	}
 	
 
@@ -116,7 +116,7 @@ public class User {
 			int count = bis.read(readbuf);
 			if(count==-1) {				
 				sendData(ProtocolCode.ONLY_LENGTH, -1);
-				System.out.println("file Àü¼Û ¿Ï·á");
+				System.out.println("file ì „ì†¡ ì™„ë£Œ");
 				break;
 			}			
 			sendData(ProtocolCode.LENGTH_AND_BYYE, count, readbuf);		

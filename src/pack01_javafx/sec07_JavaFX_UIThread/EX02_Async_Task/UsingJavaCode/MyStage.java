@@ -1,4 +1,4 @@
-package pack01_javafx.sec07_JavaFX_UIThread.EX02_Async_Task.UsingJavaCode;
+ï»¿package pack01_javafx.sec07_JavaFX_UIThread.EX02_Async_Task.UsingJavaCode;
 
 import javafx.application.Application;
 import javafx.beans.value.ChangeListener;
@@ -35,7 +35,7 @@ public class MyStage extends Application{
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		
-		//#1. ·çÆ® ÄÁÅ×ÀÌ³Ê ¹× ÀÚ½Ä ³ëµå ±¸¼º
+		//#1. ë£¨íŠ¸ ì»¨í…Œì´ë„ˆ ë° ìì‹ ë…¸ë“œ êµ¬ì„±
 		VBox root = new VBox();
 		root.setPrefSize(300, 250);
 		root.setSpacing(10);
@@ -70,7 +70,7 @@ public class MyStage extends Application{
 		hbox2.setAlignment(Pos.CENTER);
 		hbox2.setSpacing(10);
 
-		//3°³ÀÇ ¹öÆ° °£°İ µ¿ÀÏÇÏ°Ô ¸ÂÃß±â
+		//3ê°œì˜ ë²„íŠ¼ ê°„ê²© ë™ì¼í•˜ê²Œ ë§ì¶”ê¸°
 		succeed.prefWidthProperty().bind(hbox2.widthProperty().divide(3));
 		cancel.prefWidthProperty().bind(hbox2.widthProperty().divide(3));
 		fail.prefWidthProperty().bind(hbox2.widthProperty().divide(3));
@@ -108,23 +108,23 @@ public class MyStage extends Application{
 					}
 					try {Thread.sleep(1);} catch (InterruptedException e) {						
 						return null;
-					} //ÀÌ°Ô ÀÖ¾î¾ß stopFlag¿¡ ¹İÀÀ (¹«ÇÑ ·çÇÁ¿¡¼­ interrupt() ¼öÇàÀ» À§ÇØ¼­ÀÎµíÇÔ)								
+					} //ì´ê²Œ ìˆì–´ì•¼ stopFlagì— ë°˜ì‘ (ë¬´í•œ ë£¨í”„ì—ì„œ interrupt() ìˆ˜í–‰ì„ ìœ„í•´ì„œì¸ë“¯í•¨)								
 				}				
 			}	
 			
 			@Override
 			protected void succeeded() {				
-				laptime_ta.appendText("¼º°ø\n");
+				laptime_ta.appendText("ì„±ê³µ\n");
 			}
 		
 			@Override
 			protected void failed() {				
-				laptime_ta.appendText("½ÇÆĞ\n");
+				laptime_ta.appendText("ì‹¤íŒ¨\n");
 			}
 			
 			@Override
 			protected void cancelled() {				
-				laptime_ta.appendText("Ãë¼Ò\n");
+				laptime_ta.appendText("ì·¨ì†Œ\n");
 			}
 		};
 		
@@ -240,10 +240,10 @@ public class MyStage extends Application{
 		children.add(new Separator(Orientation.HORIZONTAL));
 		children.add(laptime_ta);		
 		 
-		//#2. Scene ¼³Á¤
+		//#2. Scene ì„¤ì •
 		Scene scene = new Scene(root);
 
-		//#3. Stage ¼³Á¤
+		//#3. Stage ì„¤ì •
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		

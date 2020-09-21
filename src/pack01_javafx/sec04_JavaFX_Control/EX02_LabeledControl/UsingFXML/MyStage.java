@@ -1,4 +1,4 @@
-package pack01_javafx.sec04_JavaFX_Control.EX02_LabeledControl.UsingFXML;
+ï»¿package pack01_javafx.sec04_JavaFX_Control.EX02_LabeledControl.UsingFXML;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -13,10 +13,10 @@ public class MyStage extends Application{
 		//#1. Labeled Control
 		BorderPane root = FXMLLoader.load(getClass().getResource("root.fxml"));
 			
-		//#2. Scene ¼³Á¤
+		//#2. Scene ì„¤ì •
 		Scene scene = new Scene(root);
 		
-		//#3. Stage ¼³Á¤
+		//#3. Stage ì„¤ì •
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		

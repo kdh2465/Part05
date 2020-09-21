@@ -1,4 +1,4 @@
-package pack01_javafx.sec01_JavaFX_GUI_Structure.EX04_SetUI_UsingJavaCode;
+ï»¿package pack01_javafx.sec01_JavaFX_GUI_Structure.EX04_SetUI_UsingJavaCode;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.collections.ObservableList;
@@ -18,32 +18,32 @@ import javafx.stage.StageStyle;
 public class MyStage extends Application {
 		
 	@Override
-	//#1. ¸Å°³º¯¼ö·Î Stage Àü´Ş
+	//#1. ë§¤ê°œë³€ìˆ˜ë¡œ Stage ì „ë‹¬
 	public void start(Stage primaryStage) throws Exception {
 		
-		//#2. root ÄÁÅ×ÀÌ³Ê »ı¼º
+		//#2. root ì»¨í…Œì´ë„ˆ ìƒì„±
 		VBox parent = new VBox();
 		parent.setPrefWidth(200);
 		parent.setPrefHeight(100);
 		parent.setSpacing(20);
 		parent.setAlignment(Pos.CENTER);
 		
-		//#3. GUI ±¸¼º¿ä¼Ò »ı¼º		
-		Label lb = new Label("·¹ÀÌºí");
+		//#3. GUI êµ¬ì„±ìš”ì†Œ ìƒì„±		
+		Label lb = new Label("ë ˆì´ë¸”");
 		lb.setFont(new Font(20));				
-		Button btn = new Button("¹öÆ°");
+		Button btn = new Button("ë²„íŠ¼");
 		
-		//#4. GUI ±¸¼º¿ä¼Ò --> Root Parent¿¡ Ãß°¡		
+		//#4. GUI êµ¬ì„±ìš”ì†Œ --> Root Parentì— ì¶”ê°€		
 		ObservableList<Node> ol = parent.getChildren();
 		ol.add(lb);
 		ol.add(btn);
 		
-		//#5. Scene °´Ã¼ »ı¼º½Ã »ı¼ºÀÚ ¸Å°³º¯¼ö·Î root parent Àü´Ş
+		//#5. Scene ê°ì²´ ìƒì„±ì‹œ ìƒì„±ì ë§¤ê°œë³€ìˆ˜ë¡œ root parent ì „ë‹¬
 		Scene scene = new Scene(parent);
 		
-		//#6. Stage¿¡ Scene Ãß°¡ 
+		//#6. Stageì— Scene ì¶”ê°€ 
 		primaryStage.setScene(scene);
-		primaryStage.setTitle("Stage³»ÀÇ UI ±¸¼º ¹× ¹èÄ¡ÇÏ±â");
+		primaryStage.setTitle("Stageë‚´ì˜ UI êµ¬ì„± ë° ë°°ì¹˜í•˜ê¸°");
 		primaryStage.show();
 		
 	}	

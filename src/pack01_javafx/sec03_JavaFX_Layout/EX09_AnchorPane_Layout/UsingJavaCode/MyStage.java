@@ -1,4 +1,4 @@
-package pack01_javafx.sec03_JavaFX_Layout.EX09_AnchorPane_Layout.UsingJavaCode;
+ï»¿package pack01_javafx.sec03_JavaFX_Layout.EX09_AnchorPane_Layout.UsingJavaCode;
 
 import javafx.application.Application;
 import javafx.collections.ObservableList;
@@ -12,7 +12,7 @@ public class MyStage extends Application{
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		
-		//#1. ·çÆ® ÄÁÅ×ÀÌ³Ê ¹× ÀÚ½Ä ³ëµå ±¸¼º
+		//#1. ë£¨íŠ¸ ì»¨í…Œì´ë„ˆ ë° ìì‹ ë…¸ë“œ êµ¬ì„±
 		AnchorPane root = new AnchorPane();
 		root.setPrefSize(200, 100);
 		
@@ -38,10 +38,10 @@ public class MyStage extends Application{
 		children.add(btn2);
 		children.add(btn3);
 											
-		//#2. Scene ¼³Á¤
+		//#2. Scene ì„¤ì •
 		Scene scene = new Scene(root);
 		
-		//#3. Stage ¼³Á¤
+		//#3. Stage ì„¤ì •
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		
